@@ -54,7 +54,6 @@
 98,White,Male,31-35,Financial Services,Master's Degree,71-80,126000.0,262000.0
 99,White,Male,31-35,Financial Services,Master's Degree,61-70,159650.0,193000.0
 100,White,Male,26-30,Education,Master's Degree,61-70,55000.0,57750.0
-102,White,,36-40,Education,Doctorate Degree,1-20,299500.0,300000.0
 103,White,Female,26-30,Professional & Business Services,Bachelor's Degree,71-80,199724.0,212500.0
 105,Decline to state,Male,31-35,Information Technology (incl. software engineering),Master's Degree,71-80,438700.0,438700.0
 107,White,Male,36-40,Information Technology (incl. software engineering),Master's Degree,71-80,65000.0,293000.0
@@ -102,7 +101,6 @@
 179,White,Male,31-35,Information Technology (incl. software engineering),Bachelor's Degree,1-20,60000.0,300000.0
 180,White,Female,41-45,Manufacturing,Doctorate Degree,61-70,437577.0,437577.0
 186,"White,Asian",Non-binary,36-40,Information Technology (incl. software engineering),Master's Degree,81-90,80000.0,450000.0
-187,Decline to state,,31-35,Engineering (NOT software),Bachelor's Degree,81-90,55000.0,205000.0
 188,Southeast Asian,Female,31-35,Professional & Business Services,Master's Degree,101-110,36000.0,190000.0
 189,White,Female,36-40,Manufacturing,Bachelor's Degree,81-90,92000.0,328000.0
 190,White,Male,36-40,Financial Services,Bachelor's Degree,71-80,120000.0,288000.0
@@ -149,7 +147,6 @@
 254,White,Male,21-25,Healthcare,Bachelor's Degree,61-70,40000.0,140000.0
 260,White,Female,36-40,"Arts, Entertainment, Recreation",Master's Degree,51-60,130850.0,156250.0
 262,White,Male,56-60,Healthcare,Associate's Degree,71-80,45000.0,93400.0
-263,White,Female,41-45,Financial Services,,41-50,66000.0,186600.0
 265,White,Female,31-35,Information Technology (incl. software engineering),Bachelor's Degree,81-90,272489.0,272489.0
 269,White,Female,26-30,Engineering (NOT software),Bachelor's Degree,91-100,309275.0,309275.0
 271,White,Male,36-40,Information Technology (incl. software engineering),Bachelor's Degree,71-80,198000.0,212000.0
@@ -182,7 +179,6 @@
 318,White,Male,21-25,Information Technology (incl. software engineering),Master's Degree,61-70,70000.0,231000.0
 319,White,Male,26-30,Financial Services,Bachelor's Degree,81-90,140308.0,140308.0
 320,"White,Hispanic or Latino",Male,26-30,Public Administration (Civilian Government),Master's Degree,71-80,71600.0,72250.0
-322,White,,26-30,Information Technology (incl. software engineering),Bachelor's Degree,61-70,192500.0,200000.0
 323,White,Male,36-40,Manufacturing,Bachelor's Degree,81-90,115000.0,225000.0
 327,Other (Please specify) - Indian,Male,31-35,Manufacturing,Bachelor's Degree,61-70,210000.0,210000.0
 328,Asian,Female,31-35,Information Technology (incl. software engineering),Bachelor's Degree,81-90,360100.0,389000.0
@@ -194,7 +190,6 @@
 334,White,Male,31-35,Information Technology (incl. software engineering),Doctorate Degree,81-90,75000.0,251000.0
 335,White,Male,36-40,Information Technology (incl. software engineering),Doctorate Degree,61-70,1166000.0,2200000.0
 336,White,Male,56-60,Information Technology (incl. software engineering),Master's Degree,71-80,1433000.0,1433000.0
-337,Black or African American,Male,31-35,Manufacturing,"Some college, no degree",,86850.0,159000.0
 338,Asian,Male,26-30,Engineering (NOT software),Master's Degree,81-90,138805.0,149000.0
 339,White,Female,46-50,Financial Services,Bachelor's Degree,71-80,1113000.0,1113000.0
 341,White,Male,36-40,Engineering (NOT software),Bachelor's Degree,71-80,213500.0,209000.0
@@ -347,7 +342,6 @@
 571,White,Male,56-60,Education,Doctorate Degree,71-80,60000.0,285000.0
 574,White,Male,26-30,Information Technology (incl. software engineering),Bachelor's Degree,81-90,90886.0,126800.0
 575,White,Male,26-30,Information Technology (incl. software engineering),"Some college, no degree",51-60,29000.0,80000.0
-579,,Male,26-30,Information Technology (incl. software engineering),High school diploma / GED,71-80,60000.0,312000.0
 580,White,Male,31-35,Engineering (NOT software),Master's Degree,61-70,147500.0,156000.0
 581,White,Male,31-35,Healthcare,Bachelor's Degree,71-80,90000.0,240000.0
 582,"White,Hispanic or Latino",Male,31-35,Engineering (NOT software),Master's Degree,71-80,286000.0,286000.0
@@ -384,7 +378,6 @@
 627,Asian,Male,26-30,Information Technology (incl. software engineering),Bachelor's Degree,81-90,148753.0,146371.0
 628,White,Male,36-40,Engineering (NOT software),Bachelor's Degree,71-80,469000.0,493000.0
 629,Hispanic or Latino,Female,26-30,Professional & Business Services,Bachelor's Degree,31-40,246000.0,246000.0
-630,Decline to state,,31-35,Professional & Business Services,Doctorate Degree,61-70,382000.0,510000.0
 631,White,Male,26-30,Manufacturing,Bachelor's Degree,71-80,103690.0,118690.0
 634,Asian,Male,26-30,Information Technology (incl. software engineering),Bachelor's Degree,91-100,424150.0,470000.0
 635,Asian,Male,26-30,Information Technology (incl. software engineering),Master's Degree,91-100,581770.0,1119800.0
@@ -467,7 +460,6 @@
 766,White,Male,31-35,Engineering (NOT software),Bachelor's Degree,71-80,518500.0,541000.0
 767,White,Male,26-30,Financial Services,Bachelor's Degree,81-90,45000.0,175000.0
 769,Middle Eastern,Male,41-45,Engineering (NOT software),Doctorate Degree,71-80,48000.0,260000.0
-770,,Male,26-30,Information Technology (incl. software engineering),Bachelor's Degree,91-100,600150.0,620000.0
 771,"White,Hispanic or Latino",Male,26-30,Engineering (NOT software),Bachelor's Degree,71-80,100400.0,108000.0
 772,White,Male,26-30,Engineering (NOT software),Bachelor's Degree,61-70,214716.0,230200.0
 773,White,Male,46-50,Information Technology (incl. software engineering),"Some college, no degree",61-70,158600.0,223000.0
@@ -524,7 +516,6 @@
 854,White,Female,26-30,"Agriculture, Forestry, Fishing",Bachelor's Degree,61-70,100000.0,104348.0
 860,White,Female,31-35,Healthcare,Master's Degree,61-70,280000.0,280000.0
 861,Asian,Female,26-30,Information Technology (incl. software engineering),Bachelor's Degree,81-90,392000.0,392000.0
-864,White,Male,31-35,Information Technology (incl. software engineering),Bachelor's Degree,,130200.0,114000.0
 866,Asian,Female,26-30,Financial Services,Master's Degree,71-80,120000.0,138000.0
 868,Asian,Male,26-30,Information Technology (incl. software engineering),Master's Degree,1-20,135000.0,135000.0
 869,White,Male,46-50,Professional & Business Services,Bachelor's Degree,71-80,180000.0,322500.0
@@ -654,7 +645,6 @@
 1083,Other (Please specify) - Latino,Female,26-30,Information Technology (incl. software engineering),Bachelor's Degree,81-90,67200.0,111000.0
 1084,Asian,Female,41-45,Financial Services,Bachelor's Degree,91-100,25000.0,220000.0
 1085,White,Male,31-35,Engineering (NOT software),Doctorate Degree,71-80,210000.0,210000.0
-1086,,Male,41-45,Public Administration (Civilian Government),Bachelor's Degree,71-80,202500.0,232000.0
 1087,White,Male,31-35,Engineering (NOT software),Bachelor's Degree,91-100,123764.0,121100.0
 1088,White,Female,46-50,Other Services,"Some college, no degree",81-90,53100.0,54000.0
 1092,White,Male,31-35,Professional & Business Services,Master's Degree,81-90,120000.0,279000.0
@@ -677,7 +667,6 @@
 1124,White,Male,26-30,"Arts, Entertainment, Recreation","Some college, no degree",81-90,120000.0,460000.0
 1125,White,Male,36-40,Professional & Business Services,Bachelor's Degree,81-90,80000.0,200000.0
 1128,White,Male,41-45,Financial Services,Master's Degree,71-80,500000.0,500000.0
-1129,Decline to state,,51-55,Utilities,High school diploma / GED,101-110,200000.0,200000.0
 1130,White,Male,31-35,Construction,Master's Degree,61-70,207000.0,200000.0
 1131,Asian,Male,36-40,Information Technology (incl. software engineering),Master's Degree,81-90,264000.0,250000.0
 1133,White,Male,36-40,Professional & Business Services,Master's Degree,71-80,387600.0,387600.0
@@ -714,7 +703,6 @@
 1204,White,Female,26-30,Utilities,Bachelor's Degree,81-90,96200.0,120000.0
 1206,White,Male,31-35,Information Technology (incl. software engineering),"Some college, no degree",41-50,35000.0,190000.0
 1207,White,Male,41-45,Engineering (NOT software),Bachelor's Degree,71-80,90000.0,286500.0
-1209,,,,,Bachelor's Degree,71-80,200000.0,500000.0
 1210,White,Male,31-35,Financial Services,Specialist Degree,81-90,225000.0,525000.0
 1211,White,Male,26-30,Information Technology (incl. software engineering),Bachelor's Degree,61-70,125000.0,125000.0
 1212,White,Female,36-40,Information Technology (incl. software engineering),Bachelor's Degree,71-80,215054.0,233713.0
@@ -762,7 +750,6 @@
 1268,White,Male,31-35,Engineering (NOT software),Bachelor's Degree,61-70,118150.0,125239.0
 1269,White,Male,36-40,"Agriculture, Forestry, Fishing",Master's Degree,71-80,172899.0,204145.0
 1270,Asian,Male,31-35,Engineering (NOT software),Master's Degree,71-80,160000.0,160000.0
-1273,White,Male,41-45,Information Technology (incl. software engineering),Master's Degree,,49000.0,645000.0
 1275,White,Female,26-30,Healthcare,Doctorate Degree,81-90,162000.0,162000.0
 1276,White,Male,46-50,Information Technology (incl. software engineering),Master's Degree,51-60,126000.0,199000.0
 1281,White,Male,41-45,Engineering (NOT software),Doctorate Degree,91-100,617200.0,673000.0
@@ -830,7 +817,6 @@
 1368,Asian,Male,36-40,Energy,Master's Degree,71-80,243450.0,538000.0
 1370,White,Male,41-45,Military,Master's Degree,61-70,10050.0,16700.0
 1373,White,Male,36-40,Distribution / Logistics,Bachelor's Degree,81-90,115000.0,115000.0
-1374,White,,31-35,Trade,Associate's Degree,61-70,73000.0,150000.0
 1375,Asian,Male,21-25,Information Technology (incl. software engineering),Bachelor's Degree,71-80,97073.0,97073.0
 1376,White,Male,31-35,Information Technology (incl. software engineering),Bachelor's Degree,81-90,75000.0,285000.0
 1378,White,Male,26-30,Healthcare,Master's Degree,71-80,64051.0,91550.0
@@ -849,7 +835,6 @@
 1407,White,Male,31-35,Financial Services,Bachelor's Degree,81-90,80000.0,160000.0
 1408,White,Male,31-35,Information Technology (incl. software engineering),Bachelor's Degree,61-70,140000.0,140000.0
 1410,White,Male,41-45,Education,Doctorate Degree,61-70,50250.0,56200.0
-1411,White,,36-40,Information Technology (incl. software engineering),Master's Degree,71-80,257000.0,343264.0
 1412,White,Male,36-40,Information Technology (incl. software engineering),High school diploma / GED,71-80,194400.0,218000.0
 1413,White,Male,36-40,Information Technology (incl. software engineering),Bachelor's Degree,61-70,235000.0,235000.0
 1414,White,Male,36-40,Retail,Master's Degree,71-80,174200.0,245000.0
@@ -902,9 +887,7 @@
 1495,White,Male,36-40,Transportation,Bachelor's Degree,71-80,1960.0,90000.0
 1497,White,Male,51-55,Information Technology (incl. software engineering),"Some college, no degree",81-90,96500.0,228000.0
 1498,White,Male,31-35,Engineering (NOT software),Bachelor's Degree,71-80,65000.0,220000.0
-1499,White,,36-40,Information Technology (incl. software engineering),Associate's Degree,71-80,50000.0,215000.0
 1502,White,Male,41-45,Professional & Business Services,Bachelor's Degree,71-80,217501.0,278000.0
-1503,,Male,31-35,Information Technology (incl. software engineering),Bachelor's Degree,71-80,65000.0,241000.0
 1504,White,Male,41-45,Information Technology (incl. software engineering),"Some college, no degree",81-90,170000.0,540000.0
 1505,White,Male,31-35,"Agriculture, Forestry, Fishing",Bachelor's Degree,71-80,280300.0,280000.0
 1506,White,Male,36-40,Information Technology (incl. software engineering),Bachelor's Degree,61-70,156620.0,156000.0
