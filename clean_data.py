@@ -40,49 +40,55 @@ data['Cost of Living'] = pd.Categorical(data['Cost of Living'],categories=['1-20
 #Puts the cleaned data in a new csv.
 data.to_csv("data/clean_data.csv", index=True)
 
-
-# gender_counts = data['Gender'].value_counts()
-# plt.pie(gender_counts,labels=gender_counts.index)
-# plt.title("Gender Distribution")
-# plt.axis('equal')
-# plt.show()
-
-# sns.countplot(x='Education',data=data)
-# plt.title("Education Levels")
-# plt.show()
-
-
-sns.countplot(x='Age',data=data)
-plt.title("Age")
-plt.show()
-
-# gender_industry = pd.crosstab(data['Industry'],data['Gender'])
-# gender_industry.plot(kind='bar', stacked=True, colormap='Set2')
-# plt.title("Gender Distribution by Industry")
-# plt.ylabel('Count')
-# plt.show()
-
-# sns.countplot(x='Education', hue='Gender', data=data)
-# plt.title('Education by Gender')
-# plt.xticks(rotation=45)
-# plt.show()
-
-
-# g = sns.FacetGrid(data, col='Industry', col_wrap=4, height=3)
-# g.map(sns.histplot, 'Cost of Living')
-# g.set_axis_labels('Cost of Living', 'Count')
-# plt.show()
-
-
 def extract_midpoint(cost_range):
     if(cost_range =='<20'):
         return 20
     lower, upper = map(int, cost_range.split('-'))
     return (lower + upper) / 2
 
-data['Age Middle'] = data['Age'].apply(extract_midpoint)
-data['COL Middle'] = data['Cost of Living'].apply(extract_midpoint)
-corr = data[['Age Middle', 'COL Middle']].corr()
-sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f')
-plt.title('Correlation Heatmap')
-plt.show()
+def prelim_graphs():
+    #Gender distribution pie chart
+    gender_counts = data['Gender'].value_counts()
+    plt.pie(gender_counts,labels=gender_counts.index)
+    plt.title("Gender Distribution")
+    plt.axis('equal')
+    plt.show()
+
+    #Education levels countplot
+    sns.countplot(x='Education',data=data)
+    plt.title("Education Levels")
+    plt.show()
+
+    #Age countplot
+    sns.countplot(x='Age',data=data)
+    plt.title("Age")
+    plt.show()
+    
+
+    #Industry of work by gender
+    gender_industry = pd.crosstab(data['Industry'],data['Gender'])
+    gender_industry.plot(kind='bar', stacked=True, colormap='Set2')
+    plt.title("Gender Distribution by Industry")
+    plt.ylabel('Count')
+    plt.show()
+
+    #Education by gender countplot
+    sns.countplot(x='Education', hue='Gender', data=data)
+    plt.title('Education by Gender')
+    plt.xticks(rotation=45)
+    plt.show()
+
+    #Cost of living by industry worked in
+    g = sns.FacetGrid(data, col='Industry', col_wrap=4, height=3)
+    g.map(sns.histplot, 'Cost of Living')
+    g.set_axis_labels('Cost of Living', 'Count')
+    plt.show()
+
+
+    #Heat map of age and cost of living
+    data['Age Middle'] = data['Age'].apply(extract_midpoint)
+    data['COL Middle'] = data['Cost of Living'].apply(extract_midpoint)
+    corr = data[['Age Middle', 'COL Middle']].corr()
+    sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f')
+    plt.title('Correlation Heatmap')
+    plt.show()
