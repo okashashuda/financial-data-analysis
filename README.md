@@ -12,12 +12,12 @@ numerical = ["Annual Income", "Annual Expenses"]
 
 These are necessary tools to run our program:
 - Git
-- Python (3.8+) and these libraries
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- sklearn
+- Python (3.8+) and these libraries:
+    - pandas
+    - numpy
+    - matplotlib
+    - seaborn
+    - sklearn
 - In case of data errors, download CSV from here: https://docs.google.com/spreadsheets/d/1RtUK46jQ1C5MwVacKZiBxQFlEttFt9WT/edit?usp=sharing&ouid=100454923916141027946&rtpof=true&sd=true
 
 ## Running our program
@@ -34,7 +34,7 @@ Our data is all included in the data folder already, therefore there is no need 
 ## Authors
 
 * **Stefan Pricope** - *Initial work* - [Github](https://github.com/scp10sfu)
-* **Okasha Huda** - *Initial work* - [Github](https://github.com/okashashuda)
+* **Okasha Huda** - *Initial work* - [Github](https://github.com/okashashuda) - [Personal Website](http://okashahuda.com/)
 
 ## Acknowledgments
 

@@ -10,12 +10,13 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
+from sklearn.decomposition import PCA
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix
 from sklearn.neural_network import MLPClassifier
 
-data = pd.read_csv("data\clean_data.csv")
-# data = pd.read_csv("cmpt353dataproject/data/clean_data.csv")
+# data = pd.read_csv("data\clean_data.csv")
+data = pd.read_csv("cmpt353dataproject/data/clean_data.csv")
 
 categorical = data[["Ethnicity", "Gender", "Age", "Industry", "Education", "Cost of Living"]]
 numerical = data[["Annual Income", "Annual Expenses"]]
@@ -87,6 +88,7 @@ def svm_model():
 
 def neural_network_model():
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
+
     model = MLPClassifier(hidden_layer_sizes=(64,32), max_iter=500)
     model.fit(X_train, y_train)
 
@@ -94,12 +96,30 @@ def neural_network_model():
     print(model.score(X_train, y_train))
     print(model.score(X_valid, y_valid))
     plot_confusion_matrix(y_valid, predictions)
+
+def pca_model():
+    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
+    
+    pca = PCA(n_components=1)
+    X_train_pca = pca.fit_transform(X_train)
+    X_valid_pca = pca.transform(X_valid)
+    
+    # Train a classification model (e.g., GaussianNB) on PCA-transformed data
+    model = RandomForestClassifier(n_estimators=150)
+    model.fit(X_train_pca, y_train)
+
+    predictions = model.predict(X_valid_pca)
+
+    print(model.score(X_train_pca, y_train))
+    print(model.score(X_valid_pca, y_valid))
+    plot_confusion_matrix(y_valid, predictions)    
     
 def main():
     # bayesian_model()
     # knn_model()
     # randomforest_model()
-    #svm_model()
-    neural_network_model()
+    # svm_model()
+    # neural_network_model()
+    pca_model()
 
 main()  
