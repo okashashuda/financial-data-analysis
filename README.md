@@ -33,8 +33,8 @@ Our data is all included in the data folder already, therefore there is no need 
 
 ## Authors
 
-* **Stefan Pricope** - *Initial work* - [Github](https://github.com/scp10sfu)
-* **Okasha Huda** - *Initial work* - [Github](https://github.com/okashashuda) - [Personal Website](http://okashahuda.com/)
+* **Stefan Pricope** - [Github](https://github.com/scp10sfu)
+* **Okasha Huda** - [GitHub](https://github.com/okashashuda) - [Personal Website](http://okashahuda.com/)
 
 ## Acknowledgments
 
