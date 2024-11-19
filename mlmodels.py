@@ -49,8 +49,20 @@ def bayesian_model():
     print(model.score(X_valid,y_valid))
     plot_confusion_matrix(y_valid,predictions)
 
+def knn_model():
+    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
+
+    model = KNeighborsClassifier(n_neighbors=5)
+    model.fit(X_train,y_train)
+
+    predictions = model.predict(X_valid)
+    print(model.score(X_train,y_train))
+    print(model.score(X_valid,y_valid))
+    plot_confusion_matrix(y_valid,predictions)
+
 
 def main():
-    bayesian_model()
+    #bayesian_model()
+    knn_model()
 
 main()  
