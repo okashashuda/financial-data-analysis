@@ -9,10 +9,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix
 
-data = pd.read_csv("data\clean_data.csv")
+# data = pd.read_csv("data\clean_data.csv")
+data = pd.read_csv("cmpt353dataproject/data/clean_data.csv")
 
 categorical = data[["Ethnicity", "Gender", "Age", "Industry", "Education", "Cost of Living"]]
 numerical = data[["Annual Income", "Annual Expenses"]]
@@ -45,9 +47,9 @@ def bayesian_model():
     model = GaussianNB()
     model.fit(X_train, y_train)
     predictions = model.predict(X_valid)
-    print(model.score(X_train,y_train))
-    print(model.score(X_valid,y_valid))
-    plot_confusion_matrix(y_valid,predictions)
+    print(model.score(X_train, y_train))
+    print(model.score(X_valid, y_valid))
+    plot_confusion_matrix(y_valid, predictions)
 
 def knn_model():
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
@@ -56,13 +58,36 @@ def knn_model():
     model.fit(X_train,y_train)
 
     predictions = model.predict(X_valid)
-    print(model.score(X_train,y_train))
-    print(model.score(X_valid,y_valid))
-    plot_confusion_matrix(y_valid,predictions)
+    print(model.score(X_train, y_train))
+    print(model.score(X_valid, y_valid))
+    plot_confusion_matrix(y_valid, predictions)
 
+def randomforest_model():
+    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
+
+    model = RandomForestClassifier(n_estimators=100)
+    model.fit(X_train,y_train)
+
+    predictions = model.predict(X_valid)
+    print(model.score(X_train, y_train))
+    print(model.score(X_valid, y_valid))
+    plot_confusion_matrix(y_valid, predictions)
+
+def svm_model():
+    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
+
+    model = SVC(kernel="linear", C=2.0)
+    model.fit(X_train, y_train)
+
+    predictions = model.predict(X_valid)
+    print(model.score(X_train, y_train))
+    print(model.score(X_valid, y_valid))
+    plot_confusion_matrix(y_valid, predictions)
 
 def main():
-    #bayesian_model()
-    knn_model()
+    # bayesian_model()
+    # knn_model()
+    # randomforest_model()
+    svm_model()
 
 main()  
