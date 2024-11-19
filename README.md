@@ -8,7 +8,7 @@ The main factors we used are:
 categorical = ["Ethnicity", "Gender", "Age", "Industry", "Education", "Cost of Living"]
 numerical = ["Annual Income", "Annual Expenses"]
 
-### Setup
+## Setup
 
 These are necessary tools to run our program:
 - Git
