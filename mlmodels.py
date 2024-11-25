@@ -110,7 +110,7 @@ def pca_model(X,y):
     
 def main():
     #Reddit Data organization and encoding the categorical data
-    reddit_categorical = reddit_data[["Age", "Industry", "Education"]]
+    reddit_categorical = reddit_data[["Age", "Industry", "Relationship Status"]]
     reddit_numerical = reddit_data[["Annual Income", "Annual Expenses"]]
 
 
@@ -123,9 +123,9 @@ def main():
     reddit_numerical_scaled = scaler.fit_transform(reddit_numerical)
 
     Xred = pd.concat([pd.DataFrame(reddit_numerical_scaled, columns=reddit_numerical.columns)])
-    yred = reddit_data["Relationship Status"].values
+    yred = reddit_data["Education"].values
 
-    kaggle_categorical = kaggle_data[["Education","Industry"]]
+    kaggle_categorical = kaggle_data[["Relationship Status","Education"]]
     kaggle_numerical = kaggle_data[["Age", "Annual Income"]]
 
     kaggle_label_encoders = {}
@@ -135,15 +135,15 @@ def main():
     
     kaggle_numerical_scaled = scaler.fit_transform(kaggle_numerical)
     Xkag = pd.concat([pd.DataFrame(kaggle_numerical_scaled, columns=kaggle_numerical.columns)])
-    ykag = kaggle_data["Relationship Status"].values
+    ykag = kaggle_data["Industry"].values
 
     #Running models on reddit data
-    bayesian_model(Xred,yred)
-    knn_model(Xred,yred)
-    randomforest_model(Xred,yred)
-    svm_model(Xred,yred)
-    neural_network_model(Xred,yred)
-    pca_model(Xred,yred)
+    # bayesian_model(Xred,yred)
+    # knn_model(Xred,yred)
+    # randomforest_model(Xred,yred)
+    # svm_model(Xred,yred)
+    # neural_network_model(Xred,yred)
+    # pca_model(Xred,yred)
 
     #Running models on kaggle data
     bayesian_model(Xkag,ykag)
