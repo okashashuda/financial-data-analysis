@@ -6,12 +6,13 @@ import seaborn as sns
 
 
 # IMPORT DATA
-data = pd.read_csv("cmpt353dataproject/data/financedata.csv")
+reddit_data = pd.read_csv("cmpt353dataproject/data/reddit_financedata.csv")
+kaggle_data = pd.read_csv("cmpt353dataproject/data/kaggle_financedata.csv")
 
 
-# CLEAN DATA
+# CLEAN REDDIT DATA
 # keep only columns that are relevant to our use case
-data = data[["What is your race / ethnicity? Select all that apply.",
+reddit_data = reddit_data[["What is your race / ethnicity? Select all that apply.",
              "What is your gender?",
              "What is your age? ",
              "What is your relationship status? ",
@@ -22,7 +23,7 @@ data = data[["What is your race / ethnicity? Select all that apply.",
              "Annual Income"]]
 
 # rename columns for ease of use
-data = data.rename(columns={"What is your race / ethnicity? Select all that apply.": "Ethnicity",
+reddit_data = reddit_data.rename(columns={"What is your race / ethnicity? Select all that apply.": "Ethnicity",
                             "What is your gender?": "Gender",
                             "What is your age? ": "Age",
                             "What is your relationship status? ": "Relationship Status",
@@ -31,19 +32,19 @@ data = data.rename(columns={"What is your race / ethnicity? Select all that appl
                             "Using this cost of living index, looking at the third column of the table / first column of numbers (with the title Cost of Living Index) what is the cost of living in your location? If your location is not listed, use the closest approximation in your opinion. ": "Cost of Living"})
 
 # keep only columns where 'annual expenses' or 'annual income' are NOT zero
-data = data[(data != 0).all(axis=1)]
-data = data.dropna()
+reddit_data = reddit_data[(reddit_data != 0).all(axis=1)]
+reddit_data = reddit_data.dropna()
 
 # convert int to float, for consistency
-data["Annual Income"] = data["Annual Income"].astype("float")
+reddit_data["Annual Income"] = reddit_data["Annual Income"].astype("float")
 
 # orders both of the ordered categorical columns, to provide brevity in graphs
-data['Age'] = pd.Categorical(data['Age'],
+reddit_data['Age'] = pd.Categorical(reddit_data['Age'],
                              categories=['<20','21-25','26-30','31-35','36-40','41-45','46-50','51-55','56-60','61-65','66-70'],
                              ordered=True)
 
 relationship = ['Married', 'In a relationship, but not married', 'Divorced - In a relationship, but not married', 'Divorced - Remarried', 'Widowed - In a relationship, but not married', 'Widowed - Remarried']
-single = ['Single, never married', 'Divorced', 'Widowed']
+single = ['Single, never married', 'Divorced', 'Widowed', 'Single']
 
 # function to categorize relationship status
 def categorize_status(status):
@@ -53,15 +54,47 @@ def categorize_status(status):
         return "single"
     return status
 
-data["Relationship Status"] = data["Relationship Status"].apply(categorize_status)
+reddit_data["Relationship Status"] = reddit_data["Relationship Status"].apply(categorize_status)
 
-data['Cost of Living'] = pd.Categorical(data['Cost of Living'],
+reddit_data['Cost of Living'] = pd.Categorical(reddit_data['Cost of Living'],
                                         categories=['1-20','21-30','31-40','41-50','51-60','61-70','71-80','81-90','91-100','101-110','111-120','121-130','131-140','141-150'],
                                         ordered=True)
 
-# puts the cleaned data in a new csv
-data.to_csv("cmpt353dataproject/data/clean_data.csv", index=True)
 
+# CLEAN KAGGLE DATA
+# keep only columns that are relevant to our use case
+kaggle_data = kaggle_data[["Age", "Education_Level", "Occupation", "Marital_Status", "Gender", "Income"]]
+
+# rename columns for ease of use
+kaggle_data = kaggle_data.rename(columns={"Education_Level": "Education",
+                                          "Occupation": "Industry",
+                                          "Marital_Status": "Relationship Status",
+                                          "Income": "Annual Income"})
+
+# drop any columns or rows with empty values
+kaggle_data = kaggle_data.dropna()
+
+# convert int to float, for consistency
+kaggle_data["Annual Income"] = kaggle_data["Annual Income"].astype("float")
+
+kaggle_data["Relationship Status"] = kaggle_data["Relationship Status"].apply(categorize_status)
+
+
+# FILTER OUTLIERS
+reddit_data = reddit_data[(reddit_data["Annual Income"] >= 20000) & 
+                          (reddit_data["Annual Income"] <= 1000000)]
+
+kaggle_data = kaggle_data[(kaggle_data["Annual Income"] >= 20000) &
+                          (kaggle_data["Annual Income"] <= 1000000)]
+
+
+# EXPORT DATA TO CSV FILES
+# puts the cleaned data in a new .csv files
+reddit_data.to_csv("cmpt353dataproject/data/clean_reddit.csv", index=True)
+kaggle_data.to_csv("cmpt353dataproject/data/clean_kaggle.csv", index=True)
+
+
+# PRELIMINARY GRAPHS (to get an idea of the data)
 def extract_midpoint(cost_range):
     if(cost_range =='<20'):
         return 20
@@ -70,45 +103,45 @@ def extract_midpoint(cost_range):
 
 def prelim_graphs():
     # gender distribution pie chart
-    gender_counts = data['Gender'].value_counts()
+    gender_counts = reddit_data['Gender'].value_counts()
     plt.pie(gender_counts,labels=gender_counts.index)
     plt.title("Gender Distribution")
     plt.axis('equal')
     plt.show()
 
     # education levels countplot
-    sns.countplot(x='Education',data=data)
+    sns.countplot(x='Education',reddit_data=reddit_data)
     plt.title("Education Levels")
     plt.show()
 
     # age countplot
-    sns.countplot(x='Age',data=data)
+    sns.countplot(x='Age',reddit_data=reddit_data)
     plt.title("Age")
     plt.show()
     
     # industry of work by gender
-    gender_industry = pd.crosstab(data['Industry'],data['Gender'])
+    gender_industry = pd.crosstab(reddit_data['Industry'],reddit_data['Gender'])
     gender_industry.plot(kind='bar', stacked=True, colormap='Set2')
     plt.title("Gender Distribution by Industry")
     plt.ylabel('Count')
     plt.show()
 
     # education by gender countplot
-    sns.countplot(x='Education', hue='Gender', data=data)
+    sns.countplot(x='Education', hue='Gender', reddit_data=reddit_data)
     plt.title('Education by Gender')
     plt.xticks(rotation=45)
     plt.show()
 
     # cost of living by industry worked in
-    g = sns.FacetGrid(data, col='Industry', col_wrap=4, height=3)
+    g = sns.FacetGrid(reddit_data, col='Industry', col_wrap=4, height=3)
     g.map(sns.histplot, 'Cost of Living')
     g.set_axis_labels('Cost of Living', 'Count')
     plt.show()
 
     # heat map of age and cost of living
-    data['Age Middle'] = data['Age'].apply(extract_midpoint)
-    data['COL Middle'] = data['Cost of Living'].apply(extract_midpoint)
-    corr = data[['Age Middle', 'COL Middle']].corr()
+    reddit_data['Age Middle'] = reddit_data['Age'].apply(extract_midpoint)
+    reddit_data['COL Middle'] = reddit_data['Cost of Living'].apply(extract_midpoint)
+    corr = reddit_data[['Age Middle', 'COL Middle']].corr()
     sns.heatmap(corr, annot=True, cmap='coolwarm', fmt='.2f')
     plt.title('Correlation Heatmap')
     plt.show()
