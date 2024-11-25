@@ -15,25 +15,13 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix
 from sklearn.neural_network import MLPClassifier
 
-# data = pd.read_csv("data\clean_data.csv")
-data = pd.read_csv("cmpt353dataproject/data/clean_data.csv")
-
-categorical = data[["Ethnicity", "Gender", "Age", "Industry", "Education", "Cost of Living"]]
-numerical = data[["Annual Income", "Annual Expenses"]]
-
-
-label_encoders = {}
-for column in categorical.columns:
-    label_encoders[column] = LabelEncoder()
-    categorical[column] = label_encoders[column].fit_transform(categorical[column])
-
-scaler = StandardScaler()
-numerical_scaled = scaler.fit_transform(numerical)
-
-X = pd.concat([pd.DataFrame(numerical_scaled, columns=numerical.columns)])
-y = data["Relationship Status"].values
+# reddit_data = pd.read_csv("data\clean_reddit.csv")
+# kaggle_data = pd.read_csv("data\clean_kaggle.csv")
+reddit_data = pd.read_csv("data\clean_reddit.csv")
+kaggle_data = pd.read_csv("data\clean_kaggle.csv")
 
 
+# Plots a confusion matrix to compare correctly predicted values.
 def plot_confusion_matrix(y_valid, predictions):
     cm = confusion_matrix(y_valid, predictions)
     plt.figure(figsize=(8, 6))
@@ -43,7 +31,8 @@ def plot_confusion_matrix(y_valid, predictions):
     plt.ylabel('True Labels', fontsize=14)
     plt.show()
 
-def bayesian_model():
+# Bayesian Model
+def bayesian_model(X,y):
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
 
     model = GaussianNB()
@@ -53,7 +42,8 @@ def bayesian_model():
     print(model.score(X_valid, y_valid))
     plot_confusion_matrix(y_valid, predictions)
 
-def knn_model():
+#KNN Model
+def knn_model(X,y):
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
 
     model = KNeighborsClassifier(n_neighbors=5)
@@ -64,7 +54,8 @@ def knn_model():
     print(model.score(X_valid, y_valid))
     plot_confusion_matrix(y_valid, predictions)
 
-def randomforest_model():
+# Random forest model
+def randomforest_model(X,y):
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
 
     model = RandomForestClassifier(n_estimators=100)
@@ -75,7 +66,8 @@ def randomforest_model():
     print(model.score(X_valid, y_valid))
     plot_confusion_matrix(y_valid, predictions)
 
-def svm_model():
+#SVM Model
+def svm_model(X,y):
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
 
     model = SVC(kernel="linear", C=2.0)
@@ -86,7 +78,8 @@ def svm_model():
     print(model.score(X_valid, y_valid))
     plot_confusion_matrix(y_valid, predictions)
 
-def neural_network_model():
+# Neural Network Model
+def neural_network_model(X,y):
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
 
     model = MLPClassifier(hidden_layer_sizes=(64,32), max_iter=500)
@@ -97,7 +90,8 @@ def neural_network_model():
     print(model.score(X_valid, y_valid))
     plot_confusion_matrix(y_valid, predictions)
 
-def pca_model():
+# PCA transformed data model
+def pca_model(X,y):
     X_train, X_valid, y_train, y_valid = train_test_split(X, y)
     
     pca = PCA(n_components=1)
@@ -115,11 +109,48 @@ def pca_model():
     plot_confusion_matrix(y_valid, predictions)    
     
 def main():
-    # bayesian_model()
-    # knn_model()
-    # randomforest_model()
-    # svm_model()
-    # neural_network_model()
-    pca_model()
+    #Reddit Data organization and encoding the categorical data
+    reddit_categorical = reddit_data[["Age", "Industry", "Education"]]
+    reddit_numerical = reddit_data[["Annual Income", "Annual Expenses"]]
+
+
+    reddit_label_encoders = {}
+    for column in reddit_categorical.columns:
+        reddit_label_encoders[column] = LabelEncoder()
+        reddit_categorical[column] = reddit_label_encoders[column].fit_transform(reddit_categorical[column])
+
+    scaler = StandardScaler()
+    reddit_numerical_scaled = scaler.fit_transform(reddit_numerical)
+
+    Xred = pd.concat([pd.DataFrame(reddit_numerical_scaled, columns=reddit_numerical.columns)])
+    yred = reddit_data["Relationship Status"].values
+
+    kaggle_categorical = kaggle_data[["Education","Industry"]]
+    kaggle_numerical = kaggle_data[["Age", "Annual Income"]]
+
+    kaggle_label_encoders = {}
+    for column in kaggle_categorical.columns:
+        kaggle_label_encoders[column] = LabelEncoder()
+        kaggle_categorical[column] = kaggle_label_encoders[column].fit_transform(kaggle_categorical[column])
+    
+    kaggle_numerical_scaled = scaler.fit_transform(kaggle_numerical)
+    Xkag = pd.concat([pd.DataFrame(kaggle_numerical_scaled, columns=kaggle_numerical.columns)])
+    ykag = kaggle_data["Relationship Status"].values
+
+    #Running models on reddit data
+    bayesian_model(Xred,yred)
+    knn_model(Xred,yred)
+    randomforest_model(Xred,yred)
+    svm_model(Xred,yred)
+    neural_network_model(Xred,yred)
+    pca_model(Xred,yred)
+
+    #Running models on kaggle data
+    bayesian_model(Xkag,ykag)
+    knn_model(Xkag,ykag)
+    randomforest_model(Xkag,ykag)
+    svm_model(Xkag,ykag)
+    neural_network_model(Xkag,ykag)
+    pca_model(Xkag,ykag)
 
 main()  
