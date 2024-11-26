@@ -17,11 +17,10 @@ from sklearn.neural_network import MLPClassifier
 
 # OKASHA
 # reddit_data = pd.read_csv("cmpt353dataproject/data/clean_reddit.csv")
-# kaggle_data = pd.read_csv("cmpt353dataproject/data/clean_kaggle.csv")
 
 # STEFAN
 reddit_data = pd.read_csv("data\clean_reddit.csv")
-kaggle_data = pd.read_csv("data\clean_kaggle.csv")
+
 
 
 # Plots a confusion matrix to compare correctly predicted values.
@@ -113,33 +112,17 @@ def pca_model(X,y):
     
 def main():
     #Reddit Data organization and encoding the categorical data
-    reddit_categorical = reddit_data[["Age", "Industry", "Relationship Status"]]
-    reddit_numerical = reddit_data[["Annual Income", "Annual Expenses"]]
+    #reddit_categorical = reddit_data[["Age", "Industry", "Relationship Status", "Ethnicity","Gender","Education","Cost of Living"]]
+    #reddit_numerical = reddit_data[["Annual Income", "Annual Expenses"]]
 
 
-    reddit_label_encoders = {}
-    for column in reddit_categorical.columns:
-        reddit_label_encoders[column] = LabelEncoder()
-        reddit_categorical[column] = reddit_label_encoders[column].fit_transform(reddit_categorical[column])
+    # scaler = StandardScaler()
+    # reddit_numerical_scaled = scaler.fit_transform(reddit_numerical)
 
-    scaler = StandardScaler()
-    reddit_numerical_scaled = scaler.fit_transform(reddit_numerical)
+    # Xred = pd.concat([pd.DataFrame(reddit_numerical_scaled, columns=reddit_numerical.columns)])
+    # yred = reddit_data["Education"].values
 
-    Xred = pd.concat([pd.DataFrame(reddit_numerical_scaled, columns=reddit_numerical.columns)])
-    yred = reddit_data["Education"].values
-
-    kaggle_categorical = kaggle_data[["Relationship Status","Education"]]
-    kaggle_numerical = kaggle_data[["Age", "Annual Income"]]
-
-    kaggle_label_encoders = {}
-    for column in kaggle_categorical.columns:
-        kaggle_label_encoders[column] = LabelEncoder()
-        kaggle_categorical[column] = kaggle_label_encoders[column].fit_transform(kaggle_categorical[column])
-    
-    kaggle_numerical_scaled = scaler.fit_transform(kaggle_numerical)
-    Xkag = pd.concat([pd.DataFrame(kaggle_numerical_scaled, columns=kaggle_numerical.columns)])
-    ykag = kaggle_data["Industry"].values
-
+    print('hello')
     #Running models on reddit data
     # bayesian_model(Xred,yred)
     # knn_model(Xred,yred)
@@ -147,13 +130,5 @@ def main():
     # svm_model(Xred,yred)
     # neural_network_model(Xred,yred)
     # pca_model(Xred,yred)
-
-    #Running models on kaggle data
-    bayesian_model(Xkag,ykag)
-    knn_model(Xkag,ykag)
-    randomforest_model(Xkag,ykag)
-    svm_model(Xkag,ykag)
-    neural_network_model(Xkag,ykag)
-    pca_model(Xkag,ykag)
 
 main()  

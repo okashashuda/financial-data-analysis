@@ -2,13 +2,21 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+from sklearn.preprocessing import LabelEncoder
 
 
 # IMPORT DATA
-reddit_data = pd.read_csv("cmpt353dataproject/data/reddit_financedata.csv")
-kaggle_data = pd.read_csv("cmpt353dataproject/data/kaggle_financedata.csv")
+reddit_data = pd.read_csv("data/reddit_financedata.csv")
 
+# Does statistical analysis to see which variables are most correlated to annual income
+reddit_label_encoders = {}
+for column in reddit_data.columns:
+    reddit_label_encoders[column] = LabelEncoder()
+    reddit_data[column] = reddit_label_encoders[column].fit_transform(reddit_data[column])
+
+
+correlations = reddit_data.corr()
+print(correlations["Annual Income"].sort_values(ascending=False))
 
 # CLEAN REDDIT DATA
 # keep only columns that are relevant to our use case
@@ -61,37 +69,17 @@ reddit_data['Cost of Living'] = pd.Categorical(reddit_data['Cost of Living'],
                                         ordered=True)
 
 
-# CLEAN KAGGLE DATA
-# keep only columns that are relevant to our use case
-kaggle_data = kaggle_data[["Age", "Education_Level", "Occupation", "Marital_Status", "Gender", "Income"]]
-
-# rename columns for ease of use
-kaggle_data = kaggle_data.rename(columns={"Education_Level": "Education",
-                                          "Occupation": "Industry",
-                                          "Marital_Status": "Relationship Status",
-                                          "Income": "Annual Income"})
-
-# drop any columns or rows with empty values
-kaggle_data = kaggle_data.dropna()
-
-# convert int to float, for consistency
-kaggle_data["Annual Income"] = kaggle_data["Annual Income"].astype("float")
-
-kaggle_data["Relationship Status"] = kaggle_data["Relationship Status"].apply(categorize_status)
-
 
 # FILTER OUTLIERS
 reddit_data = reddit_data[(reddit_data["Annual Income"] >= 20000) & 
                           (reddit_data["Annual Income"] <= 500000)]
 
-kaggle_data = kaggle_data[(kaggle_data["Annual Income"] >= 20000) &
-                          (kaggle_data["Annual Income"] <= 500000)]
+
 
 
 # EXPORT DATA TO CSV FILES
 # puts the cleaned data in a new .csv files
 reddit_data.to_csv("cmpt353dataproject/data/clean_reddit.csv", index=True)
-kaggle_data.to_csv("cmpt353dataproject/data/clean_kaggle.csv", index=True)
 
 
 # PRELIMINARY GRAPHS (to get an idea of the data)
