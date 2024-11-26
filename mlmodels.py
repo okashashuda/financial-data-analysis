@@ -15,8 +15,11 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix
 from sklearn.neural_network import MLPClassifier
 
-# reddit_data = pd.read_csv("data\clean_reddit.csv")
-# kaggle_data = pd.read_csv("data\clean_kaggle.csv")
+# OKASHA
+# reddit_data = pd.read_csv("cmpt353dataproject/data/clean_reddit.csv")
+# kaggle_data = pd.read_csv("cmpt353dataproject/data/clean_kaggle.csv")
+
+# STEFAN
 reddit_data = pd.read_csv("data\clean_reddit.csv")
 kaggle_data = pd.read_csv("data\clean_kaggle.csv")
 

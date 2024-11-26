@@ -30,7 +30,6 @@
 53,White,Male,31-35,relationship,Healthcare,Doctorate Degree,51-60,250000.0,250000.0
 54,"White,Asian",Female,36-40,relationship,Other Services,Doctorate Degree,91-100,194000.0,250000.0
 55,White,Male,21-25,single,Information Technology (incl. software engineering),Master's Degree,71-80,36000.0,88000.0
-57,"Pacific Islander,Asian,Southeast Asian",Male,31-35,relationship,Healthcare,Doctorate Degree,71-80,310000.0,662600.0
 58,White,Male,36-40,relationship,Public Administration (Civilian Government),Master's Degree,81-90,175237.0,175237.0
 59,White,Male,31-35,relationship,Media,Bachelor's Degree,91-100,199420.0,205520.0
 61,Black or African American,Female,26-30,relationship,Healthcare,Bachelor's Degree,71-80,200000.0,200000.0
@@ -62,11 +61,9 @@
 113,Black or African American,Female,21-25,relationship,Financial Services,Bachelor's Degree,71-80,81000.0,81000.0
 115,White,Male,26-30,single,Engineering (NOT software),Bachelor's Degree,61-70,79000.0,79000.0
 116,"White,Southeast Asian",Male,31-35,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,53000.0,268450.0
-117,White,Male,36-40,relationship,Healthcare,Doctorate Degree,61-70,275000.0,723686.0
 120,Asian,Male,36-40,single,Professional & Business Services,Master's Degree,71-80,16000.0,369000.0
 121,White,Male,31-35,single,Information Technology (incl. software engineering),Bachelor's Degree,51-60,45800.0,45800.0
 123,White,Male,26-30,single,Financial Services,Bachelor's Degree,91-100,75000.0,360500.0
-127,"White,Hispanic or Latino",Male,41-45,relationship,Financial Services,Master's Degree,81-90,817000.0,817000.0
 129,Asian,Female,21-25,single,Information Technology (incl. software engineering),Bachelor's Degree,91-100,70000.0,300000.0
 130,"White,Southeast Asian",Male,31-35,single,Transportation,Bachelor's Degree,81-90,141000.0,141000.0
 133,Southeast Asian,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,62700.0,180000.0
@@ -80,12 +77,10 @@
 145,Decline to state,Male,51-55,single,Financial Services,Master's Degree,91-100,95600.0,96000.0
 148,White,Female,41-45,relationship,Financial Services,Master's Degree,61-70,98036.0,139860.0
 149,Asian,Male,36-40,relationship,Energy,Master's Degree,71-80,125000.0,125000.0
-150,"Asian,Southeast Asian",Female,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,491000.0,532000.0
 151,"White,Asian",Male,26-30,single,Healthcare,Bachelor's Degree,61-70,154500.0,154500.0
 152,White,Male,41-45,single,Engineering (NOT software),Bachelor's Degree,71-80,37450.0,37450.0
 154,White,Female,46-50,relationship,Healthcare,Doctorate Degree,71-80,122800.0,122800.0
 156,White,Male,31-35,relationship,Healthcare,Doctorate Degree,81-90,351000.0,351000.0
-158,White,Male,51-55,relationship,Financial Services,Master's Degree,71-80,564500.0,780000.0
 162,"White,Pacific Islander",Female,36-40,relationship,Financial Services,Bachelor's Degree,81-90,108500.0,124000.0
 168,Black or African American,Female,26-30,single,Military,"Some college, no degree",71-80,65611.0,65611.0
 171,White,Male,21-25,single,Public Administration (Civilian Government),"Some college, no degree",71-80,126853.0,140640.0
@@ -99,7 +94,6 @@
 189,White,Female,36-40,relationship,Manufacturing,Bachelor's Degree,81-90,92000.0,328000.0
 190,White,Male,36-40,relationship,Financial Services,Bachelor's Degree,71-80,120000.0,288000.0
 191,White,Male,31-35,relationship,Military,Master's Degree,81-90,229000.0,229000.0
-193,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,298000.0,655000.0
 196,"White,Middle Eastern",Non-binary,36-40,single,Information Technology (incl. software engineering),Master's Degree,101-110,111500.0,190000.0
 197,White,Male,31-35,relationship,Engineering (NOT software),Master's Degree,81-90,17500.0,112000.0
 198,White,Male,21-25,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,122069.0,120840.0
@@ -132,7 +126,6 @@
 246,Black or African American,Female,26-30,relationship,Healthcare,Bachelor's Degree,81-90,190000.0,190000.0
 247,White,Male,36-40,relationship,Manufacturing,Doctorate Degree,51-60,194112.0,198000.0
 248,White,Male,26-30,relationship,Media,Master's Degree,71-80,151600.0,193500.0
-249,White,Male,46-50,relationship,Financial Services,Master's Degree,71-80,400000.0,565000.0
 250,White,Male,31-35,relationship,Public Administration (Civilian Government),Master's Degree,71-80,102177.0,273500.0
 251,"White,Black or African American",Male,26-30,relationship,Retail,Bachelor's Degree,71-80,160000.0,167500.0
 252,"White,Hispanic or Latino",Male,31-35,single,Financial Services,Bachelor's Degree,81-90,32000.0,75000.0
@@ -143,7 +136,6 @@
 269,White,Female,26-30,relationship,Engineering (NOT software),Bachelor's Degree,91-100,309275.0,309275.0
 271,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,198000.0,212000.0
 272,White,Female,31-35,relationship,Information Technology (incl. software engineering),Doctorate Degree,91-100,240386.0,246570.0
-273,Hispanic or Latino,Male,36-40,relationship,Financial Services,Master's Degree,31-40,150000.0,540000.0
 274,Asian,Female,31-35,single,Manufacturing,Master's Degree,61-70,210000.0,228000.0
 277,Black or African American,Male,26-30,single,Real Estate,Bachelor's Degree,91-100,197000.0,197000.0
 282,Asian,Male,26-30,relationship,Financial Services,Bachelor's Degree,91-100,145500.0,202500.0
@@ -217,7 +209,6 @@
 389,White,Male,31-35,relationship,Healthcare,Master's Degree,71-80,150000.0,330000.0
 394,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,194439.0,205375.0
 396,White,Male,36-40,relationship,Professional & Business Services,Bachelor's Degree,71-80,188200.0,188200.0
-397,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,417000.0,507000.0
 398,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,308300.0,365000.0
 401,White,Female,26-30,relationship,Professional & Business Services,Bachelor's Degree,81-90,206000.0,221000.0
 402,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,81-90,228600.0,235000.0
@@ -226,11 +217,8 @@
 414,White,Male,26-30,single,Engineering (NOT software),Master's Degree,71-80,8330.0,108800.0
 415,White,Male,36-40,relationship,Energy,Bachelor's Degree,51-60,180000.0,244000.0
 416,Asian,Female,21-25,relationship,Engineering (NOT software),Master's Degree,81-90,89100.0,89100.0
-418,White,Male,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,815000.0,815000.0
 419,White,Male,31-35,single,Financial Services,Bachelor's Degree,71-80,138000.0,138000.0
-421,White,Male,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,882000.0,889000.0
 423,Hispanic or Latino,Male,46-50,relationship,Information Technology (incl. software engineering),Bachelor's Degree,21-30,14000.0,55000.0
-424,"White,Asian",Male,36-40,relationship,Healthcare,Doctorate Degree,61-70,750000.0,750000.0
 425,White,Male,41-45,relationship,Engineering (NOT software),Master's Degree,81-90,235600.0,341000.0
 427,White,Female,31-35,relationship,Healthcare,Master's Degree,71-80,160783.0,182211.0
 428,White,Male,51-55,relationship,Military,Master's Degree,71-80,172000.0,172000.0
@@ -249,14 +237,12 @@
 451,Decline to state,Male,26-30,single,Information Technology (incl. software engineering),Less than high school,91-100,270000.0,270000.0
 452,Asian,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,61-70,65000.0,334000.0
 453,White,Male,31-35,relationship,Financial Services,Specialist Degree,71-80,150000.0,460000.0
-455,White,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,144000.0,750000.0
 457,Asian,Female,26-30,single,Education,Bachelor's Degree,81-90,76517.0,131654.0
 458,Hispanic or Latino,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,81-90,115686.0,243800.0
 463,Asian,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,42860.0,98000.0
 465,Black or African American,Male,21-25,single,Military,Bachelor's Degree,61-70,91358.0,91725.0
 467,White,Male,31-35,relationship,Energy,Bachelor's Degree,71-80,252350.0,252350.0
 468,White,Male,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,91-100,153000.0,153000.0
-470,White,Male,41-45,relationship,Healthcare,Doctorate Degree,71-80,630000.0,630000.0
 471,White,Male,36-40,relationship,Public Administration (Civilian Government),Master's Degree,81-90,140684.0,156400.0
 473,"Asian,Southeast Asian",Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,290000.0,299200.0
 475,White,Male,31-35,relationship,Engineering (NOT software),Master's Degree,61-70,209122.0,172000.0
@@ -279,7 +265,6 @@
 505,White,Female,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,302000.0,344000.0
 506,White,Male,26-30,single,Media,Master's Degree,91-100,49700.12,155000.0
 507,White,Male,31-35,relationship,Education,Master's Degree,141-150,84700.0,150000.0
-508,White,Male,31-35,relationship,Financial Services,Master's Degree,81-90,386808.0,520000.0
 509,White,Male,21-25,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,73100.0,101200.0
 511,White,Male,21-25,single,Financial Services,Master's Degree,71-80,68081.0,69000.0
 512,Asian,Female,26-30,single,Education,Bachelor's Degree,61-70,21000.0,37000.0
@@ -295,7 +280,6 @@
 528,White,Male,31-35,relationship,Manufacturing,Associate's Degree,71-80,40000.0,143000.0
 529,White,Male,31-35,single,Energy,Doctorate Degree,61-70,196863.0,196863.0
 530,White,Male,41-45,relationship,Education,Master's Degree,71-80,244000.0,244000.0
-531,White,Male,46-50,relationship,Professional & Business Services,Bachelor's Degree,61-70,255000.0,669000.0
 532,White,Female,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,220000.0,220000.0
 533,White,Male,36-40,single,Information Technology (incl. software engineering),Associate's Degree,71-80,102700.0,105000.0
 535,White,Male,31-35,relationship,Education,Bachelor's Degree,51-60,61815.0,61852.0
@@ -308,7 +292,6 @@
 545,White,Male,31-35,relationship,Manufacturing,Master's Degree,81-90,259676.0,259676.0
 547,White,Male,26-30,relationship,Engineering (NOT software),Bachelor's Degree,61-70,224300.0,230400.0
 548,White,Male,36-40,relationship,Professional & Business Services,Bachelor's Degree,71-80,225133.0,319000.0
-549,White,Male,36-40,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,60000.0,565000.0
 550,White,Male,26-30,single,Public Administration (Civilian Government),"Some college, no degree",81-90,42000.0,85000.0
 551,White,Female,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,136797.0,136797.0
 554,White,Male,36-40,single,Financial Services,Bachelor's Degree,61-70,63000.0,215000.0
@@ -321,7 +304,6 @@
 561,Asian,Female,26-30,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,96000.0,500000.0
 562,White,Male,36-40,relationship,Healthcare,Doctorate Degree,71-80,360000.0,380000.0
 565,White,Male,36-40,single,Financial Services,Bachelor's Degree,81-90,197912.0,193846.0
-566,White,Male,36-40,single,Information Technology (incl. software engineering),Doctorate Degree,81-90,48000.0,600000.0
 568,Asian,Male,41-45,relationship,Manufacturing,Master's Degree,71-80,135600.0,140000.0
 569,Decline to state,Male,36-40,relationship,Healthcare,Master's Degree,71-80,259500.0,301000.0
 570,Asian,Male,31-35,relationship,Professional & Business Services,Doctorate Degree,91-100,94869.0,99729.0
@@ -344,7 +326,6 @@
 599,"White,Asian",Male,36-40,single,Financial Services,Master's Degree,81-90,249500.0,380000.0
 600,Decline to state,Male,31-35,single,Engineering (NOT software),Bachelor's Degree,81-90,42000.0,115000.0
 603,White,Male,46-50,relationship,Construction,Bachelor's Degree,81-90,180700.0,192000.0
-604,White,Male,26-30,relationship,Professional & Business Services,Master's Degree,81-90,533350.0,533350.0
 605,White,Female,31-35,relationship,Information Technology (incl. software engineering),Doctorate Degree,71-80,175000.0,229000.0
 606,Asian,Female,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,91-100,215468.0,249044.0
 607,White,Male,31-35,relationship,Manufacturing,Master's Degree,81-90,131560.0,131560.0
@@ -367,7 +348,6 @@
 631,White,Male,26-30,single,Manufacturing,Bachelor's Degree,71-80,103690.0,118690.0
 634,Asian,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,91-100,424150.0,470000.0
 637,White,Female,36-40,relationship,Public Administration (Civilian Government),Master's Degree,61-70,63000.0,278000.0
-639,White,Male,31-35,relationship,Healthcare,Doctorate Degree,61-70,924138.0,941000.0
 640,White,Male,31-35,relationship,Healthcare,Bachelor's Degree,81-90,228024.0,300500.0
 641,White,Male,26-30,relationship,Professional & Business Services,Bachelor's Degree,81-90,52200.0,220000.0
 642,White,Male,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,30000.0,101500.0
@@ -400,7 +380,6 @@
 689,White,Female,31-35,relationship,Utilities,Bachelor's Degree,81-90,321000.0,321000.0
 691,White,Male,36-40,relationship,Professional & Business Services,Doctorate Degree,81-90,425000.0,425000.0
 692,White,Male,31-35,relationship,Financial Services,Bachelor's Degree,81-90,47302.0,217000.0
-694,Asian,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,515000.0,515000.0
 696,White,Male,<20,single,Financial Services,Bachelor's Degree,81-90,75000.0,340000.0
 697,White,Male,31-35,single,Military,Doctorate Degree,91-100,76482.0,94940.0
 700,White,Male,36-40,single,Distribution / Logistics,Master's Degree,81-90,72000.0,72000.0
@@ -411,11 +390,9 @@
 713,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,51-60,93646.0,96346.0
 714,Black or African American,Female,31-35,relationship,Other Services,Bachelor's Degree,71-80,311798.0,314516.0
 716,White,Male,26-30,relationship,Retail,Bachelor's Degree,61-70,112550.0,128300.0
-717,White,Male,46-50,relationship,Engineering (NOT software),Master's Degree,81-90,561016.0,606796.0
 718,American Indian,Male,51-55,relationship,Information Technology (incl. software engineering),"Some college, no degree",71-80,56000.0,60000.0
 719,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,27000.0,200000.0
 721,White,Male,36-40,relationship,Manufacturing,Associate's Degree,81-90,156060.0,202000.0
-722,Decline to state,Male,36-40,relationship,Financial Services,Bachelor's Degree,51-60,180000.0,600000.0
 724,White,Male,36-40,relationship,Information Technology (incl. software engineering),Some high school,71-80,54000.0,168500.0
 725,Asian,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,60000.0,300000.0
 726,Asian,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,110000.0,305000.0
@@ -428,18 +405,15 @@
 738,White,Female,36-40,single,Education,Doctorate Degree,31-40,95000.0,95000.0
 739,Asian,Male,26-30,single,Healthcare,Master's Degree,81-90,117000.0,117000.0
 740,"White,Asian",Male,31-35,single,Financial Services,Master's Degree,61-70,142000.0,144000.0
-741,White,Male,61-65,relationship,Other Services,Doctorate Degree,61-70,513200.0,593000.0
 742,Decline to state,Female,31-35,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,50000.0,170000.0
 743,White,Male,21-25,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,200000.0,334000.0
 747,White,Male,31-35,relationship,Energy,Master's Degree,1-20,192730.0,193200.0
-748,Asian,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,90000.0,980000.0
 751,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,81700.0,220000.0
 754,White,Female,36-40,single,Public Administration (Civilian Government),Bachelor's Degree,61-70,127000.0,127000.0
 756,White,Female,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,111-120,245000.0,245000.0
 760,White,Male,26-30,single,Public Administration (Civilian Government),"Some college, no degree",71-80,31550.0,23200.0
 763,Asian,Female,26-30,relationship,Manufacturing,Bachelor's Degree,71-80,107434.0,107434.0
 764,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,139000.0,204000.0
-766,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,71-80,518500.0,541000.0
 767,White,Male,26-30,relationship,Financial Services,Bachelor's Degree,81-90,45000.0,175000.0
 769,Middle Eastern,Male,41-45,relationship,Engineering (NOT software),Doctorate Degree,71-80,48000.0,260000.0
 771,"White,Hispanic or Latino",Male,26-30,single,Engineering (NOT software),Bachelor's Degree,71-80,100400.0,108000.0
@@ -449,12 +423,10 @@
 777,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,46000.0,158600.0
 778,White,Male,36-40,relationship,Information Technology (incl. software engineering),Doctorate Degree,91-100,469350.0,470000.0
 779,White,Male,56-60,relationship,Utilities,Bachelor's Degree,81-90,70000.0,345000.0
-781,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,540000.0,540000.0
 784,White,Male,26-30,relationship,Healthcare,Master's Degree,71-80,600000.0,250000.0
 785,White,Female,26-30,relationship,Healthcare,Master's Degree,71-80,281100.0,281100.0
 786,White,Male,36-40,relationship,Education,Bachelor's Degree,91-100,278500.0,287000.0
 787,White,Female,31-35,relationship,Financial Services,Bachelor's Degree,1-20,112160.0,175000.0
-788,White,Male,51-55,relationship,Professional & Business Services,Bachelor's Degree,61-70,115000.0,647000.0
 789,White,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,61000.0,301500.0
 790,White,Male,36-40,relationship,Retail,Master's Degree,81-90,165000.0,266704.0
 792,White,Male,21-25,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,87163.0,85184.0
@@ -492,7 +464,6 @@
 846,Southeast Asian,Female,26-30,single,Information Technology (incl. software engineering),Master's Degree,91-100,180000.0,180000.0
 847,White,Female,51-55,relationship,"Agriculture, Forestry, Fishing",Master's Degree,61-70,30000.0,160000.0
 849,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,235800.0,269800.0
-850,White,Male,36-40,relationship,Professional & Business Services,Doctorate Degree,61-70,165000.0,659000.0
 852,White,Male,26-30,relationship,Engineering (NOT software),Bachelor's Degree,61-70,169500.0,169500.0
 853,Decline to state,Female,31-35,relationship,Information Technology (incl. software engineering),"Some college, no degree",81-90,330000.0,330000.0
 854,White,Female,26-30,single,"Agriculture, Forestry, Fishing",Bachelor's Degree,61-70,100000.0,104348.0
@@ -505,14 +476,12 @@
 872,Asian,Male,31-35,single,Financial Services,Specialist Degree,71-80,192833.0,192833.0
 874,Asian,Male,21-25,single,Financial Services,Bachelor's Degree,91-100,210900.0,225000.0
 875,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,78000.0,215000.0
-876,Asian,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,91-100,37366.0,503217.0
 877,White,Non-binary,31-35,relationship,Education,Master's Degree,81-90,80940.0,140000.0
 878,White,Male,56-60,relationship,Financial Services,Master's Degree,71-80,269600.0,269600.0
 879,White,Male,26-30,relationship,Engineering (NOT software),Bachelor's Degree,71-80,145400.0,228000.0
 880,Asian,Male,26-30,single,Information Technology (incl. software engineering),Master's Degree,91-100,60000.0,120000.0
 881,White,Male,31-35,relationship,Financial Services,Bachelor's Degree,91-100,80000.0,250000.0
 883,White,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,61-70,250000.0,250000.0
-884,White,Female,36-40,relationship,Financial Services,Specialist Degree,101-110,553500.0,553500.0
 885,Hispanic or Latino,Female,31-35,single,Healthcare,Bachelor's Degree,91-100,138673.0,138673.0
 886,White,Male,41-45,relationship,Manufacturing,Master's Degree,71-80,175000.0,175000.0
 888,White,Male,31-35,single,Professional & Business Services,Bachelor's Degree,81-90,368886.0,371979.0
@@ -544,7 +513,6 @@
 937,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,71-80,315000.0,315000.0
 938,White,Male,36-40,single,Manufacturing,Bachelor's Degree,71-80,45000.0,120000.0
 940,White,Male,36-40,relationship,Energy,Master's Degree,61-70,441100.0,472990.0
-943,White,Male,36-40,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,399700.0,552600.0
 944,White,Male,31-35,single,Engineering (NOT software),Bachelor's Degree,61-70,72690.0,73000.0
 945,White,Male,41-45,single,Education,Doctorate Degree,61-70,325000.0,325000.0
 947,"White,Asian",Male,36-40,relationship,Leisure & Hospitality,Bachelor's Degree,61-70,80000.0,80000.0
@@ -570,7 +538,6 @@
 983,White,Male,26-30,relationship,Financial Services,Master's Degree,71-80,269112.0,269112.0
 984,White,Male,51-55,relationship,Transportation,Bachelor's Degree,81-90,500000.0,500000.0
 985,White,Female,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,91-100,124700.0,193000.0
-986,Asian,Male,46-50,relationship,Retail,Bachelor's Degree,61-70,470000.0,510000.0
 987,"White,Asian,Hispanic or Latino",Male,31-35,relationship,Education,Doctorate Degree,71-80,47400.0,350000.0
 988,White,Female,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,139000.0,240000.0
 990,White,Female,26-30,relationship,Transportation,Bachelor's Degree,21-30,111320.0,119250.0
@@ -586,12 +553,9 @@
 1011,White,Male,31-35,relationship,Manufacturing,Bachelor's Degree,71-80,50000.0,115000.0
 1012,White,Female,26-30,relationship,Financial Services,Bachelor's Degree,71-80,107107.0,107107.0
 1018,Hispanic or Latino,Male,21-25,relationship,Public Administration (Civilian Government),Bachelor's Degree,91-100,49400.0,61200.0
-1020,White,Male,36-40,relationship,Healthcare,Doctorate Degree,61-70,490000.0,550000.0
 1025,Southeast Asian,Male,26-30,relationship,Healthcare,Doctorate Degree,81-90,271100.0,271100.0
-1027,White,Female,36-40,relationship,Information Technology (incl. software engineering),Doctorate Degree,91-100,580450.0,598400.0
 1029,White,Male,36-40,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,100000.0,200000.0
 1030,White,Male,31-35,single,Financial Services,Bachelor's Degree,71-80,145000.0,145000.0
-1031,"White,Asian",Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,150000.0,611500.0
 1032,Black or African American,Male,41-45,relationship,Information Technology (incl. software engineering),"Some college, no degree",71-80,188214.0,276793.0
 1037,White,Male,36-40,relationship,Professional & Business Services,Specialist Degree,21-30,75000.0,190000.0
 1044,Asian,Male,21-25,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,147600.0,237000.0
@@ -604,7 +568,6 @@
 1058,Asian,Male,31-35,relationship,Healthcare,Doctorate Degree,81-90,163800.0,180700.0
 1059,White,Male,36-40,relationship,Financial Services,Master's Degree,71-80,307000.0,307000.0
 1060,White,Male,51-55,relationship,"Arts, Entertainment, Recreation",Master's Degree,51-60,251500.0,360000.0
-1061,White,Female,31-35,relationship,Healthcare,Doctorate Degree,71-80,513980.0,513980.0
 1063,White,Male,61-65,relationship,Engineering (NOT software),Bachelor's Degree,91-100,159800.0,178600.0
 1064,"White,Hispanic or Latino",Female,31-35,relationship,Professional & Business Services,Doctorate Degree,91-100,235000.0,235000.0
 1067,White,Female,21-25,single,Healthcare,Bachelor's Degree,51-60,46200.0,50600.0
@@ -629,7 +592,6 @@
 1093,White,Male,46-50,relationship,Education,Master's Degree,71-80,40000.0,110000.0
 1094,White,Male,26-30,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,438660.0,438000.0
 1095,White,Male,46-50,relationship,Information Technology (incl. software engineering),Master's Degree,61-70,70000.0,400000.0
-1096,White,Male,36-40,single,Professional & Business Services,Doctorate Degree,101-110,660000.0,660000.0
 1097,White,Female,36-40,relationship,"Arts, Entertainment, Recreation",Bachelor's Degree,71-80,75000.0,251500.0
 1102,White,Male,46-50,single,Utilities,Bachelor's Degree,81-90,127200.0,127200.0
 1105,White,Female,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,198100.0,378000.0
@@ -662,12 +624,10 @@
 1161,White,Male,36-40,relationship,Energy,Master's Degree,61-70,156900.0,300000.0
 1164,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,41-50,244200.0,260000.0
 1167,"Asian,Southeast Asian",Female,26-30,relationship,Engineering (NOT software),Master's Degree,81-90,35000.0,128240.0
-1170,"White,Asian",Male,41-45,relationship,"Arts, Entertainment, Recreation",Bachelor's Degree,81-90,896000.0,896000.0
 1173,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,1-20,278100.0,260000.0
 1174,White,Male,36-40,relationship,Information Technology (incl. software engineering),Master's Degree,41-50,800000.0,400000.0
 1175,Decline to state,Male,26-30,single,Engineering (NOT software),Bachelor's Degree,91-100,120000.0,120000.0
 1177,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,91-100,70000.0,420000.0
-1178,White,Male,46-50,relationship,Information Technology (incl. software engineering),"Some college, no degree",81-90,448029.0,540508.0
 1179,Asian,Male,21-25,single,Financial Services,Bachelor's Degree,81-90,107000.0,107000.0
 1185,Southeast Asian,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,31-40,8592.0,40600.0
 1188,White,Male,26-30,single,Engineering (NOT software),Master's Degree,101-110,115000.0,115000.0
@@ -681,11 +641,9 @@
 1204,White,Female,26-30,relationship,Utilities,Bachelor's Degree,81-90,96200.0,120000.0
 1206,White,Male,31-35,relationship,Information Technology (incl. software engineering),"Some college, no degree",41-50,35000.0,190000.0
 1207,White,Male,41-45,relationship,Engineering (NOT software),Bachelor's Degree,71-80,90000.0,286500.0
-1210,White,Male,31-35,relationship,Financial Services,Specialist Degree,81-90,225000.0,525000.0
 1211,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,125000.0,125000.0
 1212,White,Female,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,215054.0,233713.0
 1213,White,Male,51-55,relationship,Healthcare,Associate's Degree,71-80,195000.0,195000.0
-1214,Asian,Male,36-40,single,Professional & Business Services,Bachelor's Degree,41-50,563515.0,555000.0
 1215,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,140900.0,196500.0
 1216,White,Male,26-30,relationship,Healthcare,Master's Degree,61-70,309437.0,309437.0
 1217,White,Male,26-30,relationship,Professional & Business Services,Bachelor's Degree,81-90,260000.0,260000.0
@@ -703,14 +661,12 @@
 1233,White,Male,31-35,relationship,Engineering (NOT software),Master's Degree,71-80,228550.0,221300.0
 1234,White,Male,31-35,relationship,Financial Services,Bachelor's Degree,71-80,352000.0,352000.0
 1235,"White,Middle Eastern",Female,36-40,relationship,Financial Services,Master's Degree,71-80,410151.0,46128.0
-1236,Southeast Asian,Male,51-55,relationship,Manufacturing,High school diploma / GED,61-70,240000.0,600000.0
 1237,White,Male,41-45,relationship,Information Technology (incl. software engineering),"Some college, no degree",71-80,90000.0,200000.0
 1238,White,Female,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,133000.0,133700.0
 1239,White,Female,31-35,single,Information Technology (incl. software engineering),Bachelor's Degree,61-70,40309.0,187000.0
 1240,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,180000.0,180000.0
 1242,Black or African American,Male,36-40,single,Information Technology (incl. software engineering),Bachelor's Degree,61-70,134800.0,233000.0
 1243,Asian,Male,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,91-100,40000.0,265000.0
-1244,Asian,Male,31-35,relationship,Healthcare,Doctorate Degree,61-70,496000.0,650000.0
 1245,White,Male,26-30,relationship,Manufacturing,Bachelor's Degree,51-60,72000.0,72000.0
 1246,White,Male,41-45,relationship,Education,Master's Degree,81-90,32000.0,125000.0
 1247,Asian,Female,51-55,single,Financial Services,Specialist Degree,91-100,120380.0,352147.0
@@ -730,7 +686,6 @@
 1270,Asian,Male,31-35,relationship,Engineering (NOT software),Master's Degree,71-80,160000.0,160000.0
 1275,White,Female,26-30,relationship,Healthcare,Doctorate Degree,81-90,162000.0,162000.0
 1276,White,Male,46-50,relationship,Information Technology (incl. software engineering),Master's Degree,51-60,126000.0,199000.0
-1281,White,Male,41-45,relationship,Engineering (NOT software),Doctorate Degree,91-100,617200.0,673000.0
 1282,White,Female,41-45,single,Information Technology (incl. software engineering),Master's Degree,81-90,185000.0,185000.0
 1283,Asian,Female,26-30,single,Financial Services,Master's Degree,91-100,136196.0,136196.0
 1286,White,Female,21-25,relationship,Professional & Business Services,Bachelor's Degree,81-90,160207.0,159832.0
@@ -741,7 +696,6 @@
 1292,White,Female,26-30,relationship,Professional & Business Services,Master's Degree,61-70,154264.0,154264.0
 1294,"White,Hispanic or Latino",Female,31-35,single,Information Technology (incl. software engineering),Bachelor's Degree,61-70,279500.0,279500.0
 1296,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,61-70,115000.0,115000.0
-1297,White,Female,36-40,relationship,Information Technology (incl. software engineering),Doctorate Degree,81-90,130000.0,503500.0
 1303,White,Male,56-60,single,Information Technology (incl. software engineering),Master's Degree,81-90,99800.0,157900.0
 1305,Asian,Male,56-60,relationship,Healthcare,Master's Degree,81-90,230000.0,391000.0
 1306,White,Male,46-50,relationship,Healthcare,Doctorate Degree,81-90,70000.0,243000.0
@@ -769,16 +723,13 @@
 1336,White,Male,41-45,relationship,Manufacturing,Bachelor's Degree,71-80,104000.0,222000.0
 1337,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,450000.0,450000.0
 1338,White,Female,51-55,relationship,Education,Doctorate Degree,51-60,55040.0,125100.0
-1341,Asian,Male,36-40,relationship,Financial Services,Bachelor's Degree,81-90,200000.0,565000.0
 1342,White,Male,26-30,relationship,Energy,Bachelor's Degree,71-80,121800.0,157000.0
 1343,White,Male,21-25,relationship,Financial Services,Bachelor's Degree,71-80,78300.0,78600.0
 1344,White,Male,31-35,relationship,Healthcare,Doctorate Degree,91-100,276795.0,280488.0
 1345,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,7875.0,130000.0
 1346,White,Male,31-35,relationship,Construction,Bachelor's Degree,61-70,151869.0,151869.0
-1347,"White,Southeast Asian",Male,31-35,single,Information Technology (incl. software engineering),Master's Degree,81-90,515818.0,515818.0
 1350,Hispanic or Latino,Male,31-35,single,Engineering (NOT software),Bachelor's Degree,91-100,53000.0,70000.0
 1351,"White,Hispanic or Latino",Male,26-30,relationship,Healthcare,Bachelor's Degree,81-90,140000.0,140000.0
-1352,White,Male,36-40,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,205773.02,716406.0
 1353,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,295000.0,370000.0
 1354,"White,Black or African American",Male,26-30,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,134350.0,134350.0
 1356,White,Male,36-40,relationship,Military,Master's Degree,81-90,183609.0,186000.0
@@ -787,10 +738,8 @@
 1361,Asian,Female,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,91-100,4800.0,176000.0
 1362,White,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,300000.0,266000.0
 1363,"White,Hispanic or Latino",Male,31-35,relationship,Engineering (NOT software),Master's Degree,91-100,189200.0,189200.0
-1364,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,60000.0,510000.0
 1365,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,200000.0,202000.0
 1367,White,Male,21-25,relationship,Engineering (NOT software),Bachelor's Degree,81-90,92550.0,141960.0
-1368,Asian,Male,36-40,relationship,Energy,Master's Degree,71-80,243450.0,538000.0
 1373,White,Male,36-40,relationship,Distribution / Logistics,Bachelor's Degree,81-90,115000.0,115000.0
 1375,Asian,Male,21-25,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,97073.0,97073.0
 1376,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,75000.0,285000.0
@@ -801,10 +750,8 @@
 1391,White,Male,26-30,relationship,Engineering (NOT software),Bachelor's Degree,81-90,101600.0,118000.0
 1394,White,Male,31-35,single,Financial Services,Bachelor's Degree,71-80,105050.0,105050.0
 1396,White,Male,26-30,relationship,Education,Bachelor's Degree,61-70,58000.0,142000.0
-1397,White,Male,31-35,relationship,Healthcare,Specialist Degree,61-70,140000.0,610000.0
 1398,"White,Other (Please specify)",Female,36-40,single,Information Technology (incl. software engineering),Associate's Degree,71-80,302498.0,302498.0
 1399,White,Female,61-65,relationship,Military,Bachelor's Degree,71-80,72500.0,152250.0
-1402,Decline to state,Male,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,91-100,125000.0,567000.0
 1404,White,Male,36-40,relationship,Military,Master's Degree,81-90,29000.0,30750.0
 1407,White,Male,31-35,single,Financial Services,Bachelor's Degree,81-90,80000.0,160000.0
 1408,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,140000.0,140000.0
@@ -830,7 +777,6 @@
 1444,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,45000.0,405000.0
 1446,White,Male,36-40,single,Information Technology (incl. software engineering),Doctorate Degree,141-150,425000.0,425000.0
 1447,White,Male,66-70,single,Financial Services,Bachelor's Degree,61-70,46200.0,41000.0
-1448,White,Male,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,132000.0,560000.0
 1450,White,Male,26-30,relationship,Engineering (NOT software),Master's Degree,71-80,304600.0,306000.0
 1451,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,81-90,195000.0,195000.0
 1452,Asian,Male,26-30,relationship,Professional & Business Services,Master's Degree,61-70,320000.0,320000.0
@@ -862,7 +808,6 @@
 1497,White,Male,51-55,single,Information Technology (incl. software engineering),"Some college, no degree",81-90,96500.0,228000.0
 1498,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,71-80,65000.0,220000.0
 1502,White,Male,41-45,relationship,Professional & Business Services,Bachelor's Degree,71-80,217501.0,278000.0
-1504,White,Male,41-45,relationship,Information Technology (incl. software engineering),"Some college, no degree",81-90,170000.0,540000.0
 1505,White,Male,31-35,relationship,"Agriculture, Forestry, Fishing",Bachelor's Degree,71-80,280300.0,280000.0
 1506,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,156620.0,156000.0
 1507,White,Male,31-35,relationship,Financial Services,Associate's Degree,71-80,148000.0,148000.0
@@ -877,7 +822,6 @@
 1520,Asian,Male,36-40,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,185000.0,176000.0
 1521,White,Female,36-40,relationship,Financial Services,Master's Degree,71-80,123800.0,123800.0
 1522,White,Male,36-40,relationship,Engineering (NOT software),Master's Degree,81-90,19780.0,115843.0
-1523,Asian,Male,31-35,relationship,Healthcare,Doctorate Degree,81-90,487500.0,790000.0
 1525,Southeast Asian,Female,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,31-40,109720.0,126000.0
 1526,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,152680.0,152680.0
 1527,White,Male,31-35,relationship,Energy,Bachelor's Degree,71-80,341500.0,448000.0
@@ -896,7 +840,6 @@
 1563,Asian,Male,31-35,relationship,Financial Services,Doctorate Degree,91-100,76000.0,251000.0
 1565,White,Male,36-40,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,80000.0,176720.0
 1566,White,Male,36-40,relationship,Military,Bachelor's Degree,51-60,196000.0,196000.0
-1567,Asian,Male,46-50,relationship,Engineering (NOT software),Bachelor's Degree,61-70,145000.0,886000.0
 1568,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,96750.0,151000.0
 1572,White,Female,31-35,relationship,Healthcare,Bachelor's Degree,81-90,29262.0,29000.0
 1573,White,Female,41-45,relationship,Financial Services,Master's Degree,81-90,342454.0,342454.0
@@ -907,7 +850,6 @@
 1578,White,Female,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,7820.0,165000.0
 1579,White,Male,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,250440.0,251000.0
 1580,White,Female,36-40,relationship,"Agriculture, Forestry, Fishing",Master's Degree,71-80,34044.0,73000.0
-1581,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,550000.0,550000.0
 1582,White,Male,46-50,relationship,Information Technology (incl. software engineering),Bachelor's Degree,51-60,140000.0,140000.0
 1583,White,Male,36-40,single,Information Technology (incl. software engineering),"Some college, no degree",81-90,192900.0,201740.0
 1584,White,Male,26-30,relationship,Engineering (NOT software),Bachelor's Degree,61-70,65000.0,270000.0
@@ -915,21 +857,18 @@
 1588,White,Male,31-35,relationship,Professional & Business Services,Bachelor's Degree,71-80,223410.0,327000.0
 1590,White,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,145960.0,208000.0
 1594,"Asian,Other (Please specify) - Taiwanese",Male,36-40,relationship,Financial Services,Master's Degree,81-90,243000.0,500000.0
-1597,Black or African American,Female,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,91-100,450000.0,900000.0
 1598,White,Male,31-35,relationship,Healthcare,Doctorate Degree,81-90,380000.0,380000.0
 1599,"White,Asian",Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,168400.0,215000.0
 1600,Decline to state,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,91-100,320800.0,500000.0
 1602,White,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,216500.0,240000.0
 1603,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,71-80,177000.0,210000.0
 1604,White,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,375000.0,430000.0
-1607,Asian,Female,26-30,single,Healthcare,Specialist Degree,71-80,547700.0,547700.0
 1608,White,Male,31-35,relationship,Engineering (NOT software),Bachelor's Degree,61-70,240800.0,240800.0
 1609,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,71-80,235600.0,249000.0
 1610,White,Male,41-45,relationship,Financial Services,Bachelor's Degree,91-100,397200.0,455000.0
 1612,White,Female,56-60,relationship,Education,Master's Degree,71-80,226944.0,252000.0
 1613,White,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,91-100,90500.0,275000.0
 1614,White,Male,41-45,relationship,Financial Services,Bachelor's Degree,61-70,155000.0,155000.0
-1615,"White,Hispanic or Latino",Female,31-35,relationship,Retail,Master's Degree,91-100,90000.0,610000.0
 1616,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,120100.0,187000.0
 1617,White,Male,46-50,single,Public Administration (Civilian Government),Bachelor's Degree,61-70,133500.0,133500.0
 1618,White,Male,36-40,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,274000.0,325000.0
@@ -943,10 +882,7 @@
 1631,White,Male,26-30,relationship,Construction,Bachelor's Degree,81-90,40000.0,150000.0
 1634,Asian,Male,41-45,relationship,Professional & Business Services,Master's Degree,81-90,207667.0,250000.0
 1636,"White,Hispanic or Latino",Male,26-30,relationship,Public Administration (Civilian Government),Specialist Degree,81-90,114700.0,231300.0
-1638,White,Male,41-45,relationship,Financial Services,Specialist Degree,91-100,650000.0,650000.0
 1639,White,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,51-60,20000.0,95000.0
-1640,White,Male,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,111-120,172300.0,622400.0
-1644,White,Male,26-30,relationship,"Agriculture, Forestry, Fishing",Master's Degree,51-60,650000.0,650000.0
 1645,White,Male,36-40,relationship,Financial Services,Master's Degree,91-100,122485.0,122485.0
 1646,Hispanic or Latino,Male,41-45,relationship,Information Technology (incl. software engineering),Bachelor's Degree,61-70,147687.0,198960.0
 1648,White,Male,31-35,single,Information Technology (incl. software engineering),Associate's Degree,81-90,65000.0,190000.0
@@ -985,11 +921,9 @@
 1705,White,Male,41-45,relationship,Information Technology (incl. software engineering),Master's Degree,81-90,165300.0,224000.0
 1706,Asian,Male,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,5050.0,303000.0
 1707,White,Male,26-30,single,Professional & Business Services,Bachelor's Degree,91-100,54000.0,130000.0
-1709,White,Female,36-40,relationship,Retail,Bachelor's Degree,81-90,94100.0,520000.0
 1710,White,Male,41-45,relationship,Natural Resources,Master's Degree,71-80,93500.0,107000.0
 1711,White,Female,26-30,relationship,Engineering (NOT software),Bachelor's Degree,81-90,128000.0,128000.0
 1712,White,Male,26-30,relationship,Financial Services,Master's Degree,61-70,36780.0,86000.0
-1713,Black or African American,Male,36-40,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,55000.0,532000.0
 1715,Hispanic or Latino,Male,26-30,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,148000.0,148000.0
 1717,White,Male,21-25,single,Information Technology (incl. software engineering),Bachelor's Degree,71-80,77450.0,80000.0
 1718,Decline to state,Male,31-35,relationship,Other Services,Master's Degree,71-80,8600000.0,30000.0
@@ -1012,15 +946,12 @@
 1743,White,Male,26-30,relationship,Engineering (NOT software),Bachelor's Degree,81-90,329000.0,330000.0
 1744,Decline to state,Male,31-35,single,Real Estate,Bachelor's Degree,71-80,135500.0,400000.0
 1745,Decline to state,Female,41-45,single,Education,Master's Degree,71-80,427400.0,427400.0
-1746,Asian,Female,26-30,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,536000.0,536000.0
 1747,White,Female,46-50,relationship,Healthcare,Doctorate Degree,61-70,204000.0,204000.0
 1749,Asian,Male,26-30,single,Transportation,Master's Degree,31-40,2500.0,250000.0
 1750,"White,Hispanic or Latino",Male,36-40,relationship,Military,Master's Degree,61-70,100000.0,160000.0
 1752,White,Male,46-50,relationship,Professional & Business Services,Bachelor's Degree,71-80,40000.0,70000.0
 1753,White,Female,36-40,single,Information Technology (incl. software engineering),Bachelor's Degree,81-90,65000.0,184000.0
 1756,White,Female,36-40,single,Transportation,Bachelor's Degree,91-100,341000.0,341000.0
-1757,White,Male,31-35,relationship,Information Technology (incl. software engineering),Master's Degree,71-80,90000.0,530000.0
 1758,Asian,Male,31-35,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,322000.0,396000.0
-1760,White,Male,36-40,relationship,Information Technology (incl. software engineering),"Some college, no degree",91-100,491400.0,575000.0
 1762,"Asian,Southeast Asian",Male,46-50,relationship,Information Technology (incl. software engineering),Bachelor's Degree,81-90,110000.0,350000.0
 1763,"White,Asian",Male,31-35,relationship,Manufacturing,Bachelor's Degree,81-90,166500.0,321380.0

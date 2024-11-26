@@ -82,10 +82,10 @@ kaggle_data["Relationship Status"] = kaggle_data["Relationship Status"].apply(ca
 
 # FILTER OUTLIERS
 reddit_data = reddit_data[(reddit_data["Annual Income"] >= 20000) & 
-                          (reddit_data["Annual Income"] <= 1000000)]
+                          (reddit_data["Annual Income"] <= 500000)]
 
 kaggle_data = kaggle_data[(kaggle_data["Annual Income"] >= 20000) &
-                          (kaggle_data["Annual Income"] <= 1000000)]
+                          (kaggle_data["Annual Income"] <= 500000)]
 
 
 # EXPORT DATA TO CSV FILES
