@@ -6,40 +6,119 @@ from sklearn.preprocessing import LabelEncoder
 
 
 # IMPORT DATA
-reddit_data = pd.read_csv("cmpt353dataproject/data/reddit_financedata.csv")
+reddit_data2023 = pd.read_csv("data/reddit_financedata2023.csv")
+reddit_data2022 = pd.read_csv("data/reddit_financedata2022.csv")
+reddit_data2021 = pd.read_csv("data/reddit_financedata2021.csv")
+reddit_data2020 = pd.read_csv("data/reddit_financedata2020.csv")
+reddit_data2018 = pd.read_csv("data/reddit_financedata2018.csv")
+reddit_data2017 = pd.read_csv("data/reddit_financedata2017.csv")
+reddit_data2016 = pd.read_csv("data/reddit_financedata2016.csv")
 
-# Does statistical analysis to see which variables are most correlated to annual income
-reddit_label_encoders = {}
-for column in reddit_data.columns:
-    reddit_label_encoders[column] = LabelEncoder()
-    reddit_data[column] = reddit_label_encoders[column].fit_transform(reddit_data[column])
 
-correlations = reddit_data.corr()
-print(correlations["Annual Income"].sort_values(ascending=False))
 
 # CLEAN REDDIT DATA
 # keep only columns that are relevant to our use case
-reddit_data = reddit_data[["Total Asset Value", "Total Debt", "Annual Expenses", "Annual Income"]]
+reddit_data2023 = reddit_data2023[["Annual Expenses", "Annual Income"]]
+
+reddit_data2022 = reddit_data2022[["Annual Expenses", "Annual Income"]]
+
+reddit_data2021 = reddit_data2021[["Annual Expenses", "Annual Income"]]
+
+expense_columns2020 = ['Housing','Utilities','Transportation','Necessities','Luxuries','Children','Debt Repayment','Savings','Charity','Healthcare','Taxes','Education','Other']
+reddit_data2020['Annual Expenses'] = reddit_data2020[expense_columns2020].sum(axis=1)
+reddit_data2020 = reddit_data2020[["Annual Expenses", "Annual Income"]]
+
+expense_columns2018 = ['Housing','Utilities','Childcare','Transportation','Groceries','Dining','Personal Care','Clothing','Pets','Gifts','Entertainment','Debt Repayment','Vacation','Charity','Healthcare','Taxes','Education','Other']
+reddit_data2018['Annual Expenses'] = reddit_data2018[expense_columns2018].sum(axis=1)
+reddit_data2018 = reddit_data2018[["Annual Expenses", "Annual Income"]]
+
+expense_columns2017 = ['Housing','Utilities','Childcare','Transportation','Groceries','Dining','Personal Care','Clothing','Car Payment','Entertainment','Debt Repayment','Vacation','Auto Fuel & Maintenance','Insurance','Open-Ended Response']
+reddit_data2017['Annual Expenses'] = reddit_data2017[expense_columns2017].sum(axis=1)
+reddit_data2017 = reddit_data2017[["Annual Expenses", "Annual Income"]]
+
+expense_columns2016 = ['Housing','Utilities','Childcare','Transportation','Groceries','Dining','Personal Care','Clothing','Car Payment','Entertainment','Debt Repayment','Vacation','Auto Fuel & Maintenance','Insurance','Open-Ended Response']
+reddit_data2016['Annual Expenses'] = reddit_data2016[expense_columns2016].sum(axis=1)
+reddit_data2016 = reddit_data2016[["Annual Expenses", "Annual Income"]]
+
+#Correlation Calculation
+correlations = reddit_data2023.corr()
+print(correlations["Annual Income"].sort_values(ascending=False))
 
 # keep only columns where values are NOT zero
-reddit_data = reddit_data[(reddit_data != 0).all(axis=1)]
-reddit_data = reddit_data.dropna()
+reddit_data2023 = reddit_data2023[(reddit_data2023 != 0).all(axis=1)]
+reddit_data2023 = reddit_data2023.dropna()
+
+reddit_data2022 = reddit_data2022[(reddit_data2022 != 0).all(axis=1)]
+reddit_data2022 = reddit_data2022.dropna()
+
+reddit_data2021 = reddit_data2021[(reddit_data2021 != 0).all(axis=1)]
+reddit_data2021 = reddit_data2021.dropna()
+
+reddit_data2020 = reddit_data2020[(reddit_data2020 != 0).all(axis=1)]
+reddit_data2020 = reddit_data2020.dropna()
+
+reddit_data2018 = reddit_data2018[(reddit_data2018 != 0).all(axis=1)]
+reddit_data2018 = reddit_data2018.dropna()
+
+reddit_data2017 = reddit_data2017[(reddit_data2017 != 0).all(axis=1)]
+reddit_data2017 = reddit_data2017.dropna()
+
+reddit_data2016 = reddit_data2016[(reddit_data2016 != 0).all(axis=1)]
+reddit_data2016 = reddit_data2016.dropna()
 
 # convert int to float, for consistency
-reddit_data["Total Asset Value"] = reddit_data["Total Asset Value"].astype("float")
-reddit_data["Total Debt"] = reddit_data["Total Debt"].astype("float")
-reddit_data["Annual Expenses"] = reddit_data["Annual Expenses"].astype("float")
-reddit_data["Annual Income"] = reddit_data["Annual Income"].astype("float")
+reddit_data2023["Annual Expenses"] = reddit_data2023["Annual Expenses"].astype("float")
+reddit_data2023["Annual Income"] = reddit_data2023["Annual Income"].astype("float")
 
+reddit_data2022["Annual Expenses"] = reddit_data2022["Annual Expenses"].astype("float")
+reddit_data2022["Annual Income"] = reddit_data2022["Annual Income"].astype("float")
+
+reddit_data2021["Annual Expenses"] = reddit_data2021["Annual Expenses"].astype("float")
+reddit_data2021["Annual Income"] = reddit_data2021["Annual Income"].astype("float")
+
+reddit_data2020["Annual Expenses"] = reddit_data2020["Annual Expenses"].astype("float")
+reddit_data2020["Annual Income"] = reddit_data2020["Annual Income"].astype("float")
+
+reddit_data2018["Annual Expenses"] = reddit_data2018["Annual Expenses"].astype("float")
+reddit_data2018["Annual Income"] = reddit_data2018["Annual Income"].astype("float")
+
+reddit_data2017["Annual Expenses"] = reddit_data2017["Annual Expenses"].astype("float")
+reddit_data2017["Annual Income"] = reddit_data2017["Annual Income"].astype("float")
+
+reddit_data2016["Annual Expenses"] = reddit_data2016["Annual Expenses"].astype("float")
+reddit_data2016["Annual Income"] = reddit_data2016["Annual Income"].astype("float")
 
 # FILTER OUTLIERS
-reddit_data = reddit_data[(reddit_data["Annual Income"] >= 20000) & 
-                          (reddit_data["Annual Income"] <= 1000000)]
+reddit_data2023 = reddit_data2023[(reddit_data2023["Annual Income"] >= 20000) & 
+                          (reddit_data2023["Annual Income"] <= 1000000)]
 
+reddit_data2022 = reddit_data2022[(reddit_data2022["Annual Income"] >= 20000) & 
+                          (reddit_data2022["Annual Income"] <= 1000000)]
+
+reddit_data2021 = reddit_data2021[(reddit_data2021["Annual Income"] >= 20000) & 
+                          (reddit_data2021["Annual Income"] <= 1000000)]
+
+reddit_data2020 = reddit_data2020[(reddit_data2020["Annual Income"] >= 20000) & 
+                          (reddit_data2020["Annual Income"] <= 1000000)]
+
+reddit_data2018 = reddit_data2018[(reddit_data2018["Annual Income"] >= 20000) & 
+                          (reddit_data2018["Annual Income"] <= 1000000)]
+
+reddit_data2017 = reddit_data2017[(reddit_data2017["Annual Income"] >= 20000) & 
+                          (reddit_data2017["Annual Income"] <= 1000000)]
+
+reddit_data2016 = reddit_data2016[(reddit_data2016["Annual Income"] >= 20000) & 
+                          (reddit_data2016["Annual Income"] <= 1000000)]
 
 # EXPORT DATA TO CSV FILES
 # puts the cleaned data in a new .csv files
-reddit_data.to_csv("cmpt353dataproject/data/clean_reddit.csv", index=True)
+reddit_data2023.to_csv("data/clean_reddit2023.csv", index=True)
+reddit_data2022.to_csv("data/clean_reddit2022.csv", index=True)
+reddit_data2021.to_csv("data/clean_reddit2021.csv", index=True)
+reddit_data2020.to_csv("data/clean_reddit2020.csv", index=True)
+reddit_data2018.to_csv("data/clean_reddit2018.csv", index=True)
+reddit_data2017.to_csv("data/clean_reddit2017.csv", index=True)
+reddit_data2016.to_csv("data/clean_reddit2016.csv", index=True)
 
 
 # PRELIMINARY GRAPHS (to get an idea of the data)
@@ -49,7 +128,7 @@ def extract_midpoint(cost_range):
     lower, upper = map(int, cost_range.split('-'))
     return (lower + upper) / 2
 
-def prelim_graphs():
+def prelim_graphs(reddit_data):
     # gender distribution pie chart
     gender_counts = reddit_data['Gender'].value_counts()
     plt.pie(gender_counts,labels=gender_counts.index)
