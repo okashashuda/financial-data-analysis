@@ -35,7 +35,7 @@ reddit_data2021 = reddit_data2021[["Annual Expenses", "Annual Income"]]
 
 expense_columns2020 = ['Housing','Utilities','Transportation','Necessities','Luxuries','Children','Debt Repayment','Savings','Charity','Healthcare','Taxes','Education','Other']
 reddit_data2020['Annual Expenses'] = reddit_data2020[expense_columns2020].sum(axis=1)
-expense_columns2020analysis = ['Housing','Utilities','Transportation','Necessities','Luxuries','Children','Debt Repayment','Charity','Taxes','Education','Other']
+expense_columns2020analysis = ['Housing','Utilities','Transportation','Necessities','Luxuries','Children','Debt Repayment','Charity','Healthcare','Taxes','Education','Other']
 reddit_data2020indexp = reddit_data2020[['Annual Income','Annual Expenses']+expense_columns2020analysis]
 reddit_data2020 = reddit_data2020[["Annual Expenses", "Annual Income"]]
 
