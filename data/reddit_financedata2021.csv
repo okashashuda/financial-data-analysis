@@ -44,24 +44,7 @@ ID,Do you consent to your answers being released individually?  ,How many indivi
 [Medical]","Debt Amounts 
 [Investment Properties / Owned Businesses]","Debt Amounts 
 [Other]","Debt Amounts 
-[Total Sum]","Enter your annual expenses for each the following items.
-[I don't categorize]","Enter your annual expenses for each the following items.   
-[Housing (Rent, mortgage, insurance, taxes, upkeep)]","Enter your annual expenses for each the following items.  
-[Utilities (phone, internet, gas, electric, water, sewer)]","Enter your annual expenses for each the following items. 
-[Transportation (car payment, transit tickets, gas, insurance, maintenance)]","Enter your annual expenses for each the following items. 
-[Necessities (groceries, clothing, personal care, household supplies)]","Enter your annual expenses for each the following items. 
-[Luxuries (restaurants, entertainment, hobbies, travel, pets, gifts)]","Enter your annual expenses for each the following items. 
-[Children (childcare, sports teams, etc.)]","Enter your annual expenses for each the following items. 
-[Debt repayment (excluding mortgage and auto, including student loans/medical)]","Enter your annual expenses for each the following items. 
-[Tax Advantaged Investments]","Enter your annual expenses for each the following items. 
-[Non-Tax Advantaged Savings]","Enter your annual expenses for each the following items.
-[Charity / Tithing]","Enter your annual expenses for each the following items. miums, co-pays)]","Enter your annual expenses for each the following items. 
-[Taxes (all taxes paid including amounts deducted from your paycheck, not including taxes directly allocated to other items like housing, transportation, etc.)]","Enter your annual expenses for each the following items. 
-[Education]","Enter your annual expenses for each the following items.  
-[Business / Rental Property Expenses]","Enter your annual expenses for each the following items. 
-[Other]",Annual Expenses,"Enter your income from each source listed below. 
-[Wages]","Enter your income from each source listed below. 
-[Self-employment]","Enter your income from each source listed below. 
+[Total Sum]",Uncategorized,Housing,Utilities,Transportation,Necessities,Luxuries,Children,Debt Repayment,Tax investments,Non-tax investments,Charity,Healthcare,Taxes,Education,Property Expenses,Other,Annual Expenses,Wages,Self Employed,"Enter your income from each source listed below. 
 [Rental Properties / Business I own]","Enter your income from each source listed below. 
 [Other]",Annual Income,Is there anything unique about your financial circumstances that would impact the data you'd like to share? 
 4,Yes,1,Stayed about the same,,Decrease,1-10%,Stay about the same,Stay about the same,"Decrease in spending due to closures or restrictions (not eating out, cancelled vacations, etc.),Increased the amount I am investing in the stock market",Neutral,Yes,USD,My views mostly align with this party,N/A,N/A,N/A,N/A,N/A,,White,Female,36-40,"Single, never married","Do not have children, and do not intend to",,,,,,,,,,,Construction,Private corporation,Administrative staff,Office Manager,For an organization,,,,,,,,,,,,,,,,,,,,Not a student,High school diploma / GED,,,,,Own,61-70,No,450000,10,,600000,4,N/A,N/A,N/A,N/A,,24000,LeanFI,Partially,51-55,No change,No change,Increased my FI and/or RE number,,,,,,,,,,168000,400,24000,9000,,,,,201400,,,,,,,,0,,,,,,,,,,,,,,,,,0,,,,,0,

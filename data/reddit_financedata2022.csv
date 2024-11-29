@@ -37,23 +37,10 @@
 [Medical]","Debt Amounts 
 [Investment Properties / Owned Businesses]","Debt Amounts 
 [Other]","Debt Amounts 
-[Total Sum]","Enter your annual expenses for each the following items.  
-[I don't categorize]","Enter your annual expenses for each the following items.
-[Housing (Rent, mortgage, insurance, taxes, upkeep)]","Enter your annual expenses for each the following items.  
-[Utilities (phone, internet, gas, electric, water, sewer)]","Enter your annual expenses for each the following items. 
-[Transportation (car payment, transit tickets, gas, insurance, maintenance)]","Enter your annual expenses for each the following items. 
-[Necessities (groceries, clothing, personal care, household supplies)]","Enter your annual expenses for each the following items.  
-[Luxuries (restaurants, entertainment, hobbies, travel, pets, gifts)]","Enter your annual expenses for each the following items. 
-[Children (childcare, sports teams, etc.)]","Enter your annual expenses for each the following items.
-[Debt repayment (excluding mortgage and auto, including student loans/medical)]","Enter your annual expenses for each the following items. 
+[Total Sum]",Uncategorized,Housing,Utilities,Transportation,Necessities,Luxuries,Children,Debt Repayment,"Enter your annual expenses for each the following items. 
 [Tax Advantaged Investments]","Enter your annual expenses for each the following items.   
-[Non-Tax Advantaged Savings]","Enter your annual expenses for each the following items. 
-[Charity / Tithing]","Enter your annual expenses for each the following items.  
-[Healthcare (direct costs, insurance premiums, co-pays)]","Enter your annual expenses for each the following items. 
-[Taxes (all taxes paid including amounts deducted from your paycheck, not including taxes directly allocated to other items like housing, transportation, etc.)]","Enter your annual expenses for each the following items. 
-[Education]","Enter your annual expenses for each the following items. 
-[Business / Rental Property Expenses]","Enter your annual expenses for each the following items. 
-[Other]",Annual Expenses,"Enter your income from each source listed below. 
+[Non-Tax Advantaged Savings]",Charity,Healthcare,Taxes,Education,"Enter your annual expenses for each the following items. 
+[Business / Rental Property Expenses]",Other,Annual Expenses,"Enter your income from each source listed below. 
 [Wages]","Enter your income from each source listed below. 
 [Self-employment]","Enter your income from each source listed below. 
 [Rental Properties / Business I own]","Enter your income from each source listed below. 
