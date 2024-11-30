@@ -30,28 +30,82 @@ reddit_data2018 = pd.read_csv("data\clean_reddit2018.csv")
 reddit_data2017 = pd.read_csv("data\clean_reddit2017.csv")
 reddit_data2016 = pd.read_csv("data\clean_reddit2016.csv")
 
+#2017 and 16 not included as they are lacking many of the expenses columns.
+reddit_data2023indexp = pd.read_csv("data\clean_reddit2023indexp.csv")
+reddit_data2022indexp = pd.read_csv("data\clean_reddit2022indexp.csv")
+reddit_data2021indexp = pd.read_csv("data\clean_reddit2021indexp.csv")
+reddit_data2020indexp = pd.read_csv("data\clean_reddit2020indexp.csv")
+reddit_data2018indexp = pd.read_csv("data\clean_reddit2018indexp.csv")
+
+
+#The datasets we are working on for annual income and annual expenses.
 datasets = [
     reddit_data2023, reddit_data2022, reddit_data2021, reddit_data2020,
     reddit_data2018, reddit_data2017, reddit_data2016
 ]
 
+#Specifies the years we are working on and adds a year column to each database.
 years = [2023, 2022, 2021, 2020, 2018, 2017, 2016]
 for df, year in zip(datasets, years):
     df['Year'] = year
 
+#Combines the datasets and groups by years and means the annual income and expenses.
 combined_data = pd.concat(datasets, ignore_index=True)
-
 summary = combined_data.groupby('Year')[['Annual Income', 'Annual Expenses']].mean().reset_index()
+
+
+# Lists the expense columns we want, and all the individual expense datasets.
+expense_columns = ['Annual Income','Annual Expenses','Housing','Utilities','Transportation','Necessities','Luxuries','Children','Debt Repayment','Charity','Healthcare','Taxes','Education','Other']
+datasetsindexp = [
+    reddit_data2023indexp, reddit_data2022indexp, reddit_data2021indexp, reddit_data2020indexp,
+    reddit_data2018indexp
+]
+# Specifies years that we have avaliable and adds a column called year so we can associate expenses with a year.
+yearsindexp = [2023,2022,2021,2020,2018]
+for df, year in zip(datasetsindexp,yearsindexp):
+    df['Year'] = year
+
+#Concatenates the datasets together into one dataset. Then groups by year and finds the mean of each years expense values.
+combined_expdata = pd.concat(datasetsindexp,ignore_index=True)
+aggregated_expenses = combined_expdata.groupby('Year')[expense_columns].mean()
+
+
+
+
+
+#Plots that show information about expense trends over the years and the % change of expense spending over the years.
+def ind_exp_plots():
+    #Calculates expense growth rate.
+    expense_growth = aggregated_expenses.pct_change() * 100
+    # Plot trends for all expense columns
+    aggregated_expenses.plot(kind='line', figsize=(10, 6))
+    plt.title('Expense Trends Over Years')
+    plt.ylabel('Average Expense Value')
+    plt.xlabel('Year')
+    plt.grid()
+    plt.show()
+
+    # Plot percentage changes
+    expense_growth.plot(kind='bar', figsize=(10, 6), rot=45)
+    plt.title('Year-over-Year Growth/Decrease in Expenses')
+    plt.ylabel('Percentage Change')
+    plt.xlabel('Year')
+    plt.grid()
+    plt.show()
+
+
 
 # Split data into pre-pandemic and pandemic-era
 pre_pandemic = combined_data[combined_data['Year'] < 2020]
 pandemic = combined_data[combined_data['Year'] >= 2020]
 
+#Saving rate graph
 def saving_rate_graph():
     combined_data['Savings Rate'] = (combined_data['Annual Income'] - combined_data['Annual Expenses']) / combined_data['Annual Income']
     savings_summary = combined_data.groupby('Year')['Savings Rate'].mean().reset_index()
     sns.lineplot(x='Year', y='Savings Rate', data=savings_summary)
 
+# Does a density plot on annual income
 def density_plot_income():
     sns.kdeplot(data=pre_pandemic, x='Annual Income', label='Pre-Pandemic', shade=True)
     sns.kdeplot(data=pandemic, x='Annual Income', label='Pandemic Era', shade=True)
