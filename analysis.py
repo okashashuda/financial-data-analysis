@@ -1,19 +1,6 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import FunctionTransformer
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.svm import SVC
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import confusion_matrix
-from sklearn.neural_network import MLPRegressor
 from sklearn.linear_model import LinearRegression
 from scipy import stats
 import statsmodels.api as sm
@@ -171,123 +158,57 @@ def cagr_stats():
     else:
         print("Both are growing at the same rate.")
 
-# # Plots a confusion matrix to compare correctly predicted values.
-# def plot_confusion_matrix(y_valid, predictions):
-#     cm = confusion_matrix(y_valid, predictions)
-#     plt.figure(figsize=(8, 6))
-#     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=np.unique(y_valid), yticklabels=np.unique(y_valid))
-#     plt.title('Confusion Matrix', fontsize=16)
-#     plt.xlabel('Predicted Labels', fontsize=14)
-#     plt.ylabel('True Labels', fontsize=14)
-#     plt.show()
+def validate_2023_prediction():
+    # Filter data for training (2020-2022) and testing (2023)
+    training_data = combined_data[(combined_data['Year'] >= 2017) & (combined_data['Year'] <= 2022)]
+    test_data = combined_data[combined_data['Year'] == 2023]
 
-def plot_predicted_vs_original(X_valid,y_valid,predictions):
-    # Plot Annual Expenses vs. Annual Income with regression line
+    # Features (X) and target (y)
+    X_train = training_data[['Annual Expenses']]
+    y_train = training_data['Annual Income']
+    X_test = test_data[['Annual Expenses']]
+    y_test = test_data['Annual Income']
+
+    # Train the model
+    model = LinearRegression()
+    model.fit(X_train, y_train)
+
+    # Print model scores
+    train_score = model.score(X_train, y_train)
+    test_score = model.score(X_test, y_test)
+    print(f"Training Score: {train_score:.4f}")
+    print(f"Testing Score: {test_score:.4f}")
+
+    # Predict for 2023
+    predictions_2023 = model.predict(X_test)
+
+    # Compare predictions with actual values
+    test_data = test_data.copy()
+    test_data['Predicted Annual Income'] = predictions_2023
+    test_data['Difference'] = test_data['Predicted Annual Income'] - test_data['Annual Income']
+
+    # Print results
+    print("2023 Predictions vs Actuals:")
+    print(test_data[['Annual Expenses', 'Annual Income', 'Predicted Annual Income', 'Difference']])
+
+    # Plot actual vs predicted
     plt.figure(figsize=(10, 6))
-    plt.subplot(1, 2, 1)
-    plt.scatter(X_valid['Annual Expenses'], y_valid, color='blue', label='Original Data')
-    plt.scatter(X_valid['Annual Expenses'], predictions, color='green', label='Predicted Data', alpha=0.5)
+    plt.scatter(test_data['Annual Expenses'], test_data['Annual Income'], color='blue', label='Actual')
+    plt.scatter(test_data['Annual Expenses'], test_data['Predicted Annual Income'], color='red', label='Predicted', alpha=0.7)
+    plt.plot(test_data['Annual Expenses'], test_data['Predicted Annual Income'], color='green', label='Regression Line')
     plt.xlabel('Annual Expenses')
     plt.ylabel('Annual Income')
-    plt.title('Annual Expenses vs. Annual Income')
+    plt.title('Actual vs Predicted Annual Income for 2023')
     plt.legend()
-
-    # Plot Total Asset Value vs. Annual Income with regression line
-    plt.subplot(1, 2, 2)
-    plt.scatter(X_valid['Total Asset Value'], y_valid, color='blue', label='Original Data')
-    plt.scatter(X_valid['Total Asset Value'], predictions, color='green', label='Predicted Data', alpha=0.5)
-    plt.xlabel('Total Asset Value')
-    plt.ylabel('Annual Income')
-    plt.title('Total Asset Value vs. Annual Income')
-    plt.legend()
-
-    plt.tight_layout()
+    plt.grid()
     plt.show()
 
-# Bayesian Model
-def bayesian_model(X,y):
-    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
-
-    model = GaussianNB()
-    model.fit(X_train, y_train)
-    predictions = model.predict(X_valid)
-    print(model.score(X_train, y_train))
-    print(model.score(X_valid, y_valid))
-
-    plot_predicted_vs_original(X_valid,y_valid,predictions)
-
-#KNN Model
-def knn_model(X,y):
-    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
-
-    model = KNeighborsRegressor(n_neighbors=5)
-    model.fit(X_train,y_train)
-
-    predictions = model.predict(X_valid)
-    print(model.score(X_train, y_train))
-    print(model.score(X_valid, y_valid))
-
-    plot_predicted_vs_original(X_valid,y_valid,predictions)
-
-# Random forest model
-def randomforest_model(X,y):
-    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
-
-    model = RandomForestRegressor(n_estimators=100)
-    model.fit(X_train,y_train)
-
-    predictions = model.predict(X_valid)
-    print(model.score(X_train, y_train))
-    print(model.score(X_valid, y_valid))
-
-    plot_predicted_vs_original(X_valid,y_valid,predictions)
-
-    
-def linear_reg_model_ML(X,y):
-    X_train, X_valid, y_train, y_valid = train_test_split(X, y)
-
-    model = LinearRegression(fit_intercept=True)
-    model.fit(X_train,y_train)
-
-    predictions = model.predict(X_valid)
-    print("Training Score: ",model.score(X_train, y_train))
-    print("Validation Score: ",model.score(X_valid, y_valid))
-
-    plot_predicted_vs_original(X_valid,y_valid,predictions)
-
-def linear_reg_stats(X,y):
-    X_train, X_valid, y_train, y_valid = train_test_split(X['Annual Expenses'], y)
-
-    model = stats.linregress(X_train,y_train)
-
-    # Plot Annual Expenses vs. Annual Income with regression line
-    plt.plot(X_valid, y_valid, 'b.')
-    plt.plot(X_valid, X_valid*model.slope + model.intercept, 'r-', linewidth=3)
-    plt.xlabel('Annual Expenses')
-    plt.ylabel('Annual Income')
-    plt.title('Annual Expenses vs. Annual Income')
-    plt.legend(['Original Data', 'Regression Line'])
-
-    plt.tight_layout()
-    plt.show()    
-
-
-
-
 def main():
-
     p_tests()
+    density_plot_income()
+    saving_rate_graph()
     income_expense_trend_plot()
     cagr_stats()
     saving_rate_graph()
-    # Xred = reddit_data[['Annual Expenses', 'Total Asset Value']]
-    # yred = reddit_data["Annual Income"].values
-
-    # #Running models on reddit data
-    # # linear_reg_model_ML(Xred,yred)
-    # # bayesian_model(Xred,yred)
-    # # knn_model(Xred,yred)
-    # # randomforest_model(Xred,yred)
-    # linear_reg_stats(Xred,yred)
-
+    validate_2023_prediction()
 main()  
