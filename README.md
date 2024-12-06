@@ -1,43 +1,67 @@
-# Predicting Relationship Status from Reddit Survey
+# Financial Data Analysis and Visualization Project
+This repository contains the final project for CMPT 353 by Stefan Pricope and Okasha Huda.
 
-This is a repository storing the final project for CMPT 353 by Stefan Pricope and Okasha Huda.
+Our project analyzes financial survey data collected from Reddit over multiple years (2016–2023) to uncover trends in income, expenses, and savings rates. It further explores the impact of the COVID-19 pandemic on individual financial behaviors by comparing pre-pandemic and post-pandemic datasets.
 
-Our project takes reddit financial survey data and cleans up in order to analyze how accurately we can predict the relationship status of the submissions by various factors in our data. We wanted to try predicting a slightly different factor than just predicting income. 
+## Key Features
+1. Data Cleaning and Preprocessing:
+- Consolidated data from multiple annual datasets, ensuring consistent columns across years
+- Filtered out missing values, zero entries, and outliers for robust analysis
+- Standardized financial categories to maintain compatibility between datasets with varying formats
 
-The main factors we used are:
-- categorical = ["Ethnicity", "Gender", "Age", "Industry", "Education", "Cost of Living"]
-- numerical = ["Annual Income", "Annual Expenses"]
+2. Financial Analysis:
+- Segmented data into pre-pandemic (2016–2019) and pandemic (2020–2023) periods to evaluate financial trends
+- Performed statistical tests (t-tests and Mann-Whitney U tests) to identify significant changes in income and expense distributions
+- Calculated and visualized Compound Annual Growth Rates (CAGR) for income and expenses
+
+3. Visualization:
+- Created dynamic plots to illustrate trends in income, expenses, and savings rates across years
+- Plotted year-over-year growth rates for individual expense categories (e.g., housing, healthcare, education)
 
 ## Setup
-
-These are necessary tools to run our program:
+### Prerequisites
+Ensure the following tools and libraries are installed:
 - Git
-- Python (3.8+) and these libraries:
-    - pandas
-    - numpy
-    - matplotlib
-    - seaborn
-    - sklearn
-- In case of data errors, download CSV from here: https://docs.google.com/spreadsheets/d/1RtUK46jQ1C5MwVacKZiBxQFlEttFt9WT/edit?usp=sharing&ouid=100454923916141027946&rtpof=true&sd=true
+- Python (3.8+)
+- Python Libraries:
+    - `pandas`
+    - `matplotlib`
+    - `seaborn`
+    - `scipy`
+    - `statsmodels`
+    - `sklearn`
 
-## Running our Program
+### Data
+The cleaned datasets are included in the `data/` folder. In case of any issues, download the data from the following zip folder:
+[Reddit Financial Survey Data](https://drive.google.com/file/d/1xKDLVbc12-XuYQASu1qNxYMV6h2RZmyH/view)
 
-Our data is all included in the data folder already, therefore there is no need to download any data from external sources. In case errors occur please download the data from the link in setup.
+## How to Run
+1. Data Cleaning
+Run `clean_data.py` to clean and preprocess the raw datasets:
+```
+python clean_data.py
+```
+This script:
+- Cleans datasets for consistency
+- Exports cleaned data to the `data/` folder
+- Generates exploratory graphs, including correlations and category distributions
 
- Otherwise we have 2 files which are ran seperately with each of their purposes being slightly different:
- - clean_data.py is used to clean our data and show some graphs giving information on the data. 
- - mlmodels.py is used to run various machine learning models on the data and also provides graphs showing the accuracy of the models with a visual.
-
- Both programs can simply just be ran without any extra requirements. clean_data.py must be ran before mlmodels.py atleast once, as it generates the clean datafile.
-
+2. Analysis and Visualization
+Run `analysis.py` to perform financial trend analysis and visualization:
+```
+python analysis.py
+```
+This script:
+- Segments the data into pre-pandemic and pandemic periods
+- Performs statistical analysis (t-tests and Mann-Whitney U-tests) on income and expense changes
+- Generates plots for income trends, savings rates, and expense growth rates
+- Validates a predictive model for annual income based on expenses
 
 ## Authors
 
-* **Stefan Pricope** - [Github](https://github.com/scp10sfu)
+* **Stefan Pricope** - [GitHub](https://github.com/scp10sfu)
 * **Okasha Huda** - [GitHub](https://github.com/okashashuda) - [Personal Website](http://okashahuda.com/)
 
 ## Acknowledgments
-
-* https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md : Credit for README template.
-* Data from reddit financial survey 2024
-
+- Data Source: [Reddit Financial Survey](https://www.reddit.com/r/financialindependence/comments/1cl177n/the_official_2023_survey_results_are_here/)
+- README Template: [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md)
