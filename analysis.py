@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from scipy import stats
 import statsmodels.api as sm
 
-# OKASHA
+# READING THE FILES ON MACOS AND LINUX
 reddit_data2023 = pd.read_csv("data/clean_reddit2023.csv")
 reddit_data2022 = pd.read_csv("data/clean_reddit2022.csv")
 reddit_data2021 = pd.read_csv("data/clean_reddit2021.csv")
@@ -20,7 +20,7 @@ reddit_data2021indexp = pd.read_csv("data/clean_reddit2021indexp.csv")
 reddit_data2020indexp = pd.read_csv("data/clean_reddit2020indexp.csv")
 reddit_data2018indexp = pd.read_csv("data/clean_reddit2018indexp.csv")
 
-# STEFAN
+# READING THE FILES ON WINDOWS
 # reddit_data2023 = pd.read_csv("data\clean_reddit2023.csv")
 # reddit_data2022 = pd.read_csv("data\clean_reddit2022.csv")
 # reddit_data2021 = pd.read_csv("data\clean_reddit2021.csv")
@@ -29,12 +29,12 @@ reddit_data2018indexp = pd.read_csv("data/clean_reddit2018indexp.csv")
 # reddit_data2017 = pd.read_csv("data\clean_reddit2017.csv")
 # reddit_data2016 = pd.read_csv("data\clean_reddit2016.csv")
 
-# 2017 and 16 not included as they are lacking many of the expenses columns.
 # reddit_data2023indexp = pd.read_csv("data\clean_reddit2023indexp.csv")
 # reddit_data2022indexp = pd.read_csv("data\clean_reddit2022indexp.csv")
 # reddit_data2021indexp = pd.read_csv("data\clean_reddit2021indexp.csv")
 # reddit_data2020indexp = pd.read_csv("data\clean_reddit2020indexp.csv")
 # reddit_data2018indexp = pd.read_csv("data\clean_reddit2018indexp.csv")
+
 
 # PRELIMINARY STATISTICS
 # the datasets we are working on for annual income and annual expenses
