@@ -60,7 +60,6 @@ This script:
 - Validates a predictive model for annual income based on expenses
 
 ## Authors
-
 * **Stefan Pricope** - [GitHub](https://github.com/scp10sfu)
 * **Okasha Huda** - [GitHub](https://github.com/okashashuda) - [Personal Website](http://okashahuda.com/)
 
