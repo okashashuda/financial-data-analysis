@@ -6,34 +6,34 @@ from scipy import stats
 import statsmodels.api as sm
 
 # READING THE FILES ON MACOS AND LINUX
-reddit_data2023 = pd.read_csv("data/clean_reddit2023.csv")
-reddit_data2022 = pd.read_csv("data/clean_reddit2022.csv")
-reddit_data2021 = pd.read_csv("data/clean_reddit2021.csv")
-reddit_data2020 = pd.read_csv("data/clean_reddit2020.csv")
-reddit_data2018 = pd.read_csv("data/clean_reddit2018.csv")
-reddit_data2017 = pd.read_csv("data/clean_reddit2017.csv")
-reddit_data2016 = pd.read_csv("data/clean_reddit2016.csv")
+# reddit_data2023 = pd.read_csv("data/clean_reddit2023.csv")
+# reddit_data2022 = pd.read_csv("data/clean_reddit2022.csv")
+# reddit_data2021 = pd.read_csv("data/clean_reddit2021.csv")
+# reddit_data2020 = pd.read_csv("data/clean_reddit2020.csv")
+# reddit_data2018 = pd.read_csv("data/clean_reddit2018.csv")
+# reddit_data2017 = pd.read_csv("data/clean_reddit2017.csv")
+# reddit_data2016 = pd.read_csv("data/clean_reddit2016.csv")
 
-reddit_data2023indexp = pd.read_csv("data/clean_reddit2023indexp.csv")
-reddit_data2022indexp = pd.read_csv("data/clean_reddit2022indexp.csv")
-reddit_data2021indexp = pd.read_csv("data/clean_reddit2021indexp.csv")
-reddit_data2020indexp = pd.read_csv("data/clean_reddit2020indexp.csv")
-reddit_data2018indexp = pd.read_csv("data/clean_reddit2018indexp.csv")
+# reddit_data2023indexp = pd.read_csv("data/clean_reddit2023indexp.csv")
+# reddit_data2022indexp = pd.read_csv("data/clean_reddit2022indexp.csv")
+# reddit_data2021indexp = pd.read_csv("data/clean_reddit2021indexp.csv")
+# reddit_data2020indexp = pd.read_csv("data/clean_reddit2020indexp.csv")
+# reddit_data2018indexp = pd.read_csv("data/clean_reddit2018indexp.csv")
 
 # READING THE FILES ON WINDOWS
-# reddit_data2023 = pd.read_csv("data\clean_reddit2023.csv")
-# reddit_data2022 = pd.read_csv("data\clean_reddit2022.csv")
-# reddit_data2021 = pd.read_csv("data\clean_reddit2021.csv")
-# reddit_data2020 = pd.read_csv("data\clean_reddit2020.csv")
-# reddit_data2018 = pd.read_csv("data\clean_reddit2018.csv")
-# reddit_data2017 = pd.read_csv("data\clean_reddit2017.csv")
-# reddit_data2016 = pd.read_csv("data\clean_reddit2016.csv")
+reddit_data2023 = pd.read_csv("data\clean_reddit2023.csv")
+reddit_data2022 = pd.read_csv("data\clean_reddit2022.csv")
+reddit_data2021 = pd.read_csv("data\clean_reddit2021.csv")
+reddit_data2020 = pd.read_csv("data\clean_reddit2020.csv")
+reddit_data2018 = pd.read_csv("data\clean_reddit2018.csv")
+reddit_data2017 = pd.read_csv("data\clean_reddit2017.csv")
+reddit_data2016 = pd.read_csv("data\clean_reddit2016.csv")
 
-# reddit_data2023indexp = pd.read_csv("data\clean_reddit2023indexp.csv")
-# reddit_data2022indexp = pd.read_csv("data\clean_reddit2022indexp.csv")
-# reddit_data2021indexp = pd.read_csv("data\clean_reddit2021indexp.csv")
-# reddit_data2020indexp = pd.read_csv("data\clean_reddit2020indexp.csv")
-# reddit_data2018indexp = pd.read_csv("data\clean_reddit2018indexp.csv")
+reddit_data2023indexp = pd.read_csv("data\clean_reddit2023indexp.csv")
+reddit_data2022indexp = pd.read_csv("data\clean_reddit2022indexp.csv")
+reddit_data2021indexp = pd.read_csv("data\clean_reddit2021indexp.csv")
+reddit_data2020indexp = pd.read_csv("data\clean_reddit2020indexp.csv")
+reddit_data2018indexp = pd.read_csv("data\clean_reddit2018indexp.csv")
 
 
 # PRELIMINARY STATISTICS
@@ -54,7 +54,7 @@ summary = combined_data.groupby('Year')[['Annual Income', 'Annual Expenses']].me
 
 
 # lists the expense columns we want, and all the individual expense datasets
-expense_columns = ['Annual Income', 'Annual Expenses', 'Housing', 'Utilities', 'Transportation', 'Necessities', 'Luxuries', 'Children', 'Debt Repayment', 'Charity', 'Healthcare', 'Taxes', 'Education', 'Other']
+expense_columns = ['Housing', 'Utilities', 'Transportation', 'Necessities', 'Luxuries', 'Children', 'Debt Repayment', 'Charity', 'Healthcare', 'Taxes', 'Education', 'Other']
 datasetsindexp = [
     reddit_data2023indexp, reddit_data2022indexp, reddit_data2021indexp, reddit_data2020indexp,
     reddit_data2018indexp
@@ -73,23 +73,25 @@ aggregated_expenses = combined_expdata.groupby('Year')[expense_columns].mean()
 # PLOTS AND VISUALS
 # plots that show information about expense trends over the years and the percentage change of expense spending over the years
 def ind_exp_plots():
-    # calculates expense growth rate
+    #Calculates expense growth rate.
     expense_growth = aggregated_expenses.pct_change() * 100
-    # plot trends for all expense columns
+    # Plot trends for all expense columns
     aggregated_expenses.plot(kind='line', figsize=(10, 6))
     plt.title('Expense Trends Over Years')
     plt.ylabel('Average Expense Value')
     plt.xlabel('Year')
     plt.grid()
-    plt.show()
+    plt.savefig('expense_trends.jpg', format='jpg') 
+    plt.close()  
 
-    # plot percentage changes
+    # Plot percentage changes
     expense_growth.plot(kind='bar', figsize=(10, 6), rot=45)
     plt.title('Year-over-Year Growth/Decrease in Expenses')
     plt.ylabel('Percentage Change')
     plt.xlabel('Year')
     plt.grid()
-    plt.show()
+    plt.savefig('expense_growth.jpg', format='jpg')
+    plt.close()
 
 
 
@@ -102,12 +104,6 @@ def saving_rate_graph():
     combined_data['Savings Rate'] = (combined_data['Annual Income'] - combined_data['Annual Expenses']) / combined_data['Annual Income']
     savings_summary = combined_data.groupby('Year')['Savings Rate'].mean().reset_index()
     sns.lineplot(x='Year', y='Savings Rate', data=savings_summary)
-
-# density plot on annual income
-def density_plot_income():
-    sns.kdeplot(data=pre_pandemic, x='Annual Income', label='Pre-Pandemic', fill=True)
-    sns.kdeplot(data=pandemic, x='Annual Income', label='Pandemic Era', fill=True)
-    plt.legend()
 
 def p_tests():
     # perform t-tests for income and expenses
@@ -128,17 +124,18 @@ def p_tests():
     print(f"Annual Expenses: U-statistic = {expenses_mwutest.statistic}, p-value = {expenses_mwutest.pvalue}")
 
 def income_expense_trend_plot():
-    # plot trends
+    # Plot trends
     plt.figure(figsize=(10, 6))
     plt.plot(summary['Year'], summary['Annual Income'], label='Annual Income', marker='o')
     plt.plot(summary['Year'], summary['Annual Expenses'], label='Annual Expenses', marker='o')
     plt.axvline(2020, color='red', linestyle='--', label='Pandemic (2020)')
     plt.xlabel('Year')
-    plt.ylabel('Amount')
+    plt.ylabel('Amount in $(USD)')
     plt.title('Trends in Annual Income and Expenses')
     plt.legend()
     plt.grid()
-    plt.show()
+    plt.savefig('income_expense_trends.jpg', format='jpg')
+    plt.close()
 
 # function which produces the CAGR stats for annual income and expenses, compares which one is growing at a faster rate
 def cagr_stats():
@@ -213,16 +210,16 @@ def validate_2023_prediction():
     plt.ylabel('Annual Income')
     plt.title('Actual vs Predicted Annual Income for 2023')
     plt.legend()
-    plt.grid()
-    plt.show()
+    plt.savefig('annual_income_predict.jpg', format='jpg')
+    plt.close()
 
 def main():
     p_tests()
-    density_plot_income()
     saving_rate_graph()
     income_expense_trend_plot()
     cagr_stats()
     saving_rate_graph()
     validate_2023_prediction()
+    ind_exp_plots()
 
 main()  

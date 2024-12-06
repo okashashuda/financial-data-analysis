@@ -36,6 +36,8 @@ The cleaned datasets are included in the `data/` folder. In case of any issues, 
 [Reddit Financial Survey Data](https://drive.google.com/file/d/1xKDLVbc12-XuYQASu1qNxYMV6h2RZmyH/view)
 
 ## How to Run
+NOTE: reading files between macOS/Linux and Windows is different. Uncomment the respective lines in both `clean_data.py` and `analysis.py` 
+
 1. Data Cleaning
 
 Run `clean_data.py` to clean and preprocess the raw datasets:
