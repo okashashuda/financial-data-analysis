@@ -37,6 +37,7 @@ The cleaned datasets are included in the `data/` folder. In case of any issues, 
 
 ## How to Run
 1. Data Cleaning
+
 Run `clean_data.py` to clean and preprocess the raw datasets:
 ```
 python clean_data.py
@@ -47,6 +48,7 @@ This script:
 - Generates exploratory graphs, including correlations and category distributions
 
 2. Analysis and Visualization
+
 Run `analysis.py` to perform financial trend analysis and visualization:
 ```
 python analysis.py
